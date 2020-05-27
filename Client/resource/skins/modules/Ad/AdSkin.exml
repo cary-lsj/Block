@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.AdSkin" width="640" height="1136"  xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bg_frame_png" height="549.33" anchorOffsetX="0" width="520" horizontalCenter="0" anchorOffsetY="0" verticalCenter="0"/>
+	<e:Image source="common_json.text-bg" x="115.44" y="416.4" anchorOffsetX="0" width="408.79" anchorOffsetY="0" height="278.48" scale9Grid="12,12,7,6"/>
+	<game:ScaleButton id="btn_close" label="" x="528" y="336" anchorOffsetX="0" width="58.8" anchorOffsetY="0" height="54.6">
+		<game:skinName>
+			<e:Skin states="up,down,disabled">
+	<e:Image width="100%" height="100%" source="common_json.Close" x="0" y="0" scaleX="1" scaleY="1"/>
+			</e:Skin>
+		</game:skinName>
+	</game:ScaleButton>
+	<e:Image source="can_not_click-text1_png" x="168" y="423" anchorOffsetY="0" height="264" anchorOffsetX="0" width="304"/>
+	<e:Image source="common_json.adtext" y="302" horizontalCenter="0.5"/>
+	
+</e:Skin>

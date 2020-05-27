@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.TestSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*">
+	<e:Image source="test_json.thumb_pb" x="114" y="172" width="412" height="276" anchorOffsetX="0" anchorOffsetY="0" />
+	<game:ScaleButton id="btn_click" label="点我" x="204" y="480" />
+	<e:Label id="txt_label" text="Label" x="293" y="246" />
+	<e:Scroller height="384" verticalScrollBar="" width="435" y="75" x="0">
+		<e:List id="list_item" width="437" y="321" anchorOffsetX="0">
+			<e:layout>
+				<e:TileLayout/>
+			</e:layout>
+		</e:List>
+		<e:Skin/>
+	</e:Scroller>
+	<game:TestItem id="item" x="387" y="299" />
+	<game:TestComponent id="itemcom" x="543" y="306" />
+</e:Skin>

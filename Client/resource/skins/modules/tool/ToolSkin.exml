@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.ToolSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="grp_tool" width="114" height="311" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="218"
+	         verticalCenter="410.5">
+		<e:Image source="common_json.set_bg" y="4.49" rotation="359.66" anchorOffsetX="0" width="79.04" anchorOffsetY="0"
+		         height="247.94" horizontalCenter="-2.5" />
+		<e:Scroller id="sc_tool" width="64" height="173" y="26" horizontalCenter="0">
+			<e:List id="gamerHead_list" itemRendererSkinName="gameSkin.GamerHeadSkin" x="-2" anchorOffsetY="0" height="170">
+				<e:layout>
+					<e:VerticalLayout gap="10" horizontalAlign="center" verticalAlign="middle" />
+				</e:layout>
+			</e:List>
+			<e:Skin/>
+		</e:Scroller>
+		<game:ScaleButton id="btn_tool" label="" x="0.75" y="182.22" anchorOffsetX="0" width="112" anchorOffsetY="0" height="128">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="common_json.time_bg_png" source.down="common_json.time_bg_png" />
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+					<e:Image source="common_json.minus_time_png" x="25" y="37" />
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:BitmapLabel id="reduceTime_num" width="55.67" height="28.33" x="23" y="276" anchorOffsetX="0" anchorOffsetY="0"
+		               textAlign="center" verticalAlign="middle" text="12" font="WaitNum_fnt" scaleX="1.2" scaleY="1.2" />
+	</e:Group>
+</e:Skin>

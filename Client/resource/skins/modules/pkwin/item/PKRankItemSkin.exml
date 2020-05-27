@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.PKRankItemSkin" width="400" height="139" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<game:GamerInfo id="gamerInfo" width="90" height="129" x="3" y="6" anchorOffsetX="0" anchorOffsetY="0" skinName="gameSkin.GamerInfo"/>
+	<e:Label id="txt_nRank" x="105" anchorOffsetY="0" height="43" anchorOffsetX="0" width="79" text="" verticalCenter="0" textAlign="center" textColor="0xf4af46"/>
+	<e:Label id="txt_time" x="180" anchorOffsetY="0" height="43" anchorOffsetX="0" width="71" text="" verticalCenter="0" textAlign="center" textColor="0xefa24a"/>
+	<e:Label id="txt_gold" x="252" anchorOffsetY="0" height="43" anchorOffsetX="0" width="73" text="" verticalCenter="0" textAlign="center" textColor="0xefa064"/>
+	<e:Label id="txt_nLevel" x="326" anchorOffsetY="0" height="43" anchorOffsetX="0" width="70" text="" verticalCenter="0" textAlign="center" textColor="0xefa547"/>
+</e:Skin>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.MenuSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*"
+        xmlns:w="http://ns.egret.com/wing">
+	<game:ScaleButton id="btn_rank" label="" x="495" y="980" width="86" height="89" bottom="77" >
+		<game:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_json.button-bg" x="0" y="0" visible="true"/>
+			<e:Group id="group" width="86" height="90" x="0" y="0">
+				<e:Image width="47" height="41" source="common_json.btn_rank" source.down="common_json.btn_rank" anchorOffsetX="0" anchorOffsetY="0" x="19.67" y="21"/>
+			</e:Group>
+			</e:Skin>
+		</game:skinName> 
+	</game:ScaleButton>
+	<game:SetView x="56" y="830" bottom="77"/>
+	<e:Group id="grp_dw" width="318.18" height="580" anchorOffsetX="0" anchorOffsetY="0"  x="161" y="244">
+		<game:ScaleButton id="btn_start" y="166.00000000000006" bottom="318" useImageSize="true" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0.4099999999999966" x="9" scaleX="1" scaleY="1">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.gamestart"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<game:ScaleButton id="btn_continue" y="324" useImageSize="true" bottom="162" horizontalCenter="0.4099999999999966" x="9" scaleX="1" scaleY="1">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.contactus"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:Image source="common_json.do_not_click" y="453" horizontalCenter="0.4099999999999966" bottom="6" x="6" scaleX="1" scaleY="1"/>
+		<game:ScaleButton id="btn_fight" label="" y="0" width="301" height="97" horizontalCenter="0" visible="false">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.key_bg"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label text="发起挑战" anchorOffsetX="0" width="187.33" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="40" style="labelStroke" textAlign="center" verticalAlign="middle" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xa57521" stroke="3" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+	</e:Group>
+	<game:ScaleButton id="btn_shop" label="商店" x="277.5" y="970" width="90.55" height="93.55" bottom="77" anchorOffsetX="0" anchorOffsetY="0">
+		<game:skinName>
+			<e:Skin states="up,down,disabled" width="93">
+			<e:Image width="100%" height="100%" source="common_json.button-bg"/>
+	<e:Label text="商店" anchorOffsetX="0" width="77.33" anchorOffsetY="0" height="42.67" fontFamily="SimHei" size="28" style="labelStroke" textAlign="center" verticalAlign="middle" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xA57521" stroke="3" horizontalCenter="0" verticalCenter="0" bold="true"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" visible="false"/>
+			</e:Skin>
+		</game:skinName>
+	</game:ScaleButton>
+	<e:Image source="common_json.diamond_png" x="22" y="23"/>
+	<e:Image source="common_json.golg_png" x="24" y="85" anchorOffsetY="0" height="39" anchorOffsetX="0" width="45"/>
+	<e:BitmapLabel id="DiamondText" width="261.86" height="51.43" x="80.85" y="28" anchorOffsetX="0" anchorOffsetY="0" font="keyNum_fnt" scaleX="0.7" scaleY="0.7" textAlign="left" verticalAlign="middle"/>
+	<e:BitmapLabel id="GoldText" width="266.14" height="57.14" x="80.85" y="87" anchorOffsetX="0" anchorOffsetY="0" font="keyNum_fnt" scaleX="0.7" scaleY="0.7" textAlign="left" verticalAlign="middle"/>
+	<e:Image source="ocean2_json.资源 27@3x" x="56" y="534"/>
+	<e:Image source="ocean2_json.资源 15@3x" x="495" y="613"/>
+	<e:Image source="ocean2_json.资源 23@3x" x="353.18" y="824"/>
+</e:Skin>

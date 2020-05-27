@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.PortSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:HScrollBar width="161.33" height="42.67" x="239.34" y="746.67" anchorOffsetX="0" anchorOffsetY="0"/>
+	<game:ScaleButton id="btn_exit" label="" x="60" y="77" width="86" height="90">
+		<game:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_json.return_port-btn"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</game:skinName>
+	</game:ScaleButton>
+	<e:Image id="img_star" source="common_json.starnum_bg" x="367" y="76" top="76"/>
+	<e:BitmapLabel id="bml_starNum" width="98" height="36" x="455" y="102" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" textAlign="center" font="porStarNum_fnt"/>
+	<e:Group id="grp_bj" width="550" height="568" y="272" top="251" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0">
+		<e:Image width="522" height="550" x="14.17" y="7.08" anchorOffsetX="0" anchorOffsetY="0" source="bg_frame_png" scaleX="1" scaleY="1"/>
+		<e:Image source="common_json.portext" x="233.36" y="15.389999999999986" scaleX="1" scaleY="1"/>>
+		<game:ScaleButton id="btn_back" label="" x="488" y="38" anchorOffsetX="0" width="58.8" anchorOffsetY="0" height="54.6">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+	<e:Image width="100%" height="100%" source="common_json.Close" x="0" y="0" scaleX="1" scaleY="1"/>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:Scroller id="sc_port" width="448" height="396" y="117.58" verticalScrollBar="" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="8" x="58.99999999999999" scaleX="1" scaleY="1">
+			<e:List id="list_port" itemRendererSkinName="gameSkin.PortBtnItemSkin" anchorOffsetY="0" height="396" x="-1.52" y="4" width="448" anchorOffsetX="0">
+			<e:layout>
+				<e:TileLayout horizontalAlign="center" verticalGap="10" orientation="rows" horizontalGap="5"/>
+			</e:layout>
+			</e:List>
+			<e:Skin/>
+		</e:Scroller>
+	</e:Group>
+	<e:Image source="ocean2_json.资源 24@3x" x="492.5" y="887.79"/>
+	<e:Image source="ocean2_json.资源 25@3x" x="190.36" y="998.06"/>
+	<e:Image source="ocean2_json.资源 23@3x" x="83" y="837.79"/>
+
+</e:Skin>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.WinSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="starThree">
+			<tween:TweenItem target="{image0}">
+				<tween:Wait duration="250"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{246}" y="{211}" alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{1}" y="{442.06}" x="{123.5}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image1}">
+				<tween:Wait duration="500"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{257.5}" y="{211}" alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{1}" rotation="{11.75}" scaleX="{1.4}" scaleY="{1.4}" y="{394.13}" x="{263.22}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image2}">
+				<tween:Wait duration="750"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{257.5}" y="{211}" alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{1}" rotation="{24.5}" y="{425.77}" x="{432.2}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="starTwo">
+			<tween:TweenItem target="{image0}">
+				<tween:Wait duration="250"/>
+				<tween:Set/>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{1}" x="{123.5}" y="{442.06}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{image1}">
+				<tween:Wait duration="500"/>
+				<tween:Set/>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{1}" x="{263.22}" y="{394.13}" rotation="{11.75}" scaleX="{1.4}" scaleY="{1.4}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="starOne">
+			<tween:TweenItem target="{image0}">
+				<tween:Wait duration="250"/>
+				<tween:Set/>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{1}" y="{442.06}" x="{123.5}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="comeOne">
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-640}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object x="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="goOne">
+			<tween:TweenItem target="{group}">
+				<tween:Set/>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object x="{640}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="seeAd">
+			<tween:TweenItem target="{image3}">
+				<tween:Set/>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object x="{290}" y="{950}" scaleX="{0.5}" scaleY="{0.5}" rotation="{180}" alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group id="group" width="640" height="1136">
+		<e:Image anchorOffsetX="21840" anchorOffsetY="37354.66" width="520" height="549.33" verticalCenter="0" source="bg_frame_png" horizontalCenter="0"/>
+		<e:Image source="common_json.wintext" y="302" horizontalCenter="0"/>
+		<game:ScaleButton id="btn_close" label="" x="528" y="336" anchorOffsetX="0" width="58.8" anchorOffsetY="0" height="54.6">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+	<e:Image width="100%" height="100%" source="common_json.Close" x="0" y="0" scaleX="1" scaleY="1"/>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<game:ScaleButton id="btn_next" label="" x="119" y="718" width="86" height="89" anchorOffsetY="0" anchorOffsetX="0">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.button-bg" x="0" y="0"/>
+				<e:Group id="group" width="86" height="90" x="0" y="0">
+					<e:Image width="62" height="56" source="common_json.btn_next" source.down="common_json.btn_next" anchorOffsetX="0" anchorOffsetY="0" x="32" y="24" scaleX="0.5" scaleY="0.7"/>
+				</e:Group>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<game:ScaleButton id="btn_again" label="" x="272" y="719"  width="86" height="89">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.button-bg" x="0" y="0"/>
+				<e:Group id="group" width="86" height="90" x="0" y="0">
+					<e:Image width="70" height="64.29" source="common_json.btn_again" source.down="common_json.btn_again" scaleY="0.7" scaleX="0.7" anchorOffsetX="0" anchorOffsetY="0" x="20.5" y="19.5"/>
+				</e:Group>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<game:ScaleButton id="btn_rank" label="" x="427" y="718" width="86" height="89" >
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.button-bg" x="0" y="0" visible="true"/>
+				<e:Group id="group" width="86" height="90" x="0" y="0">
+					<e:Image width="47" height="41" source="common_json.btn_rank" source.down="common_json.btn_rank" anchorOffsetX="0" anchorOffsetY="0" x="19.67" y="21"/>
+				</e:Group>
+				</e:Skin>
+			</game:skinName> 
+		</game:ScaleButton>
+		<e:Image id="image" width="114" height="109" x="115.99" y="464.66" source="common_json.star_bg" scaleY="0.8" scaleX="0.8" rotation="336.68"/>
+		<e:Image width="114" height="115.59" x="245.12" y="418.58" source="common_json.star_bg" scaleY="1.1" rotation="348.81" anchorOffsetY="0" scaleX="1.1"/>
+		<e:Image width="114" height="109" x="415" y="442.06" source="common_json.star_bg" scaleY="0.8" scaleX="0.8"/>
+		<e:Image id="image0" x="246" y="211" alpha="0" source="common_json.star"/>
+		<e:Image id="image1" x="246" y="211" alpha="0" source="common_json.star"/>
+		<e:Image id="image2" x="246" y="211" alpha="0" source="common_json.star"/>
+		<game:ScaleButton id="btn_ad" label="" y="575" anchorOffsetY="0" height="95" anchorOffsetX="0" width="300" x="165" scaleX="1" scaleY="1">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.key_bg"/>
+				<e:Group id="group" width="300" height="95" x="0" y="0">
+				<e:Image source="common_json.lookad" x="55" y="22" scaleX="1" scaleY="1"/>
+				</e:Group>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:Image id="image3" source="common_json.key" x="200" scaleX="1" scaleY="1" width="49" height="55" verticalCenter="0"/>
+	</e:Group>
+	
+    
+</e:Skin>

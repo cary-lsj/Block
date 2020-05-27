@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.PKWinSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bg_frame_png" y="145.75" rotation="359.92" anchorOffsetX="0" width="593.89" anchorOffsetY="0" height="690.63" horizontalCenter="-0.5" locked="true"/>
+	<e:Label text="对战结算" anchorOffsetX="0" width="187.33" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="45" style="labelStroke" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0x038208" stroke="4" verticalAlign="middle" textAlign="center" y="162.66" horizontalCenter="0"/>
+	<e:Label text="对战结算" y="153.61" anchorOffsetX="0" width="251.27" anchorOffsetY="0" height="75.45" bold="true" size="55" verticalAlign="middle" textAlign="center" horizontalCenter="-0.5" visible="false"/>
+	<e:Group id="group_pkNRank" width="640" height="1134" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<e:Label text="胜利结算" y="63" anchorOffsetX="0" width="120" anchorOffsetY="0" height="32" scaleX="1" scaleY="1" horizontalCenter="0" visible="false"/>
+		<e:Image id="btn_headImg" width="110" height="96" y="227.73" anchorOffsetX="0" anchorOffsetY="0" source="common_json.key_bg" scaleX="1" scaleY="1" horizontalCenter="0" visible="false"/>
+		<e:Label id="btn_time" text="" x="123.65" y="373.73" scaleX="1" scaleY="1" textColor="0xf7c165" visible="false"/>
+		<e:Label id="btn_score" text="" x="124.21" y="457.73" scaleX="1" scaleY="1" textColor="0xedc171" visible="false"/>
+		<e:Image source="common_json.shop_bj" y="300.06" anchorOffsetX="0" width="399.67" anchorOffsetY="0" height="464" scale9Grid="14,14,85,85" horizontalCenter="0"/>
+		<e:Label id="btn_gold" text="" y="552.16" size="45" fontFamily="Microsoft YaHei" textColor="0xf7af62" horizontalCenter="0"/>
+		<e:BitmapLabel id="btn_gold1" width="13.34" height="86.67" y="541.51" anchorOffsetX="0" anchorOffsetY="0" text="" font="shopBuyNum_fnt" scaleX="2.5" scaleY="2.5" horizontalCenter="-0.5"/>
+		<e:Image source="common_json.wintext" y="564.35" anchorOffsetX="0" width="188.91" anchorOffsetY="0" height="56.76" horizontalCenter="0" visible="false"/>
+		<game:ScaleButton id="btn_lookRank" label="查看排行" x="210.33" y="659.95" width="223" height="79.47" anchorOffsetY="0" visible="false">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.key_bg"/>
+	<e:Label text="查看排行" anchorOffsetX="0" width="187.33" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="35" style="labelStroke" textAlign="center" verticalAlign="middle" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xA57521" stroke="3" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" visible="false"/>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<game:GamerInfo id="gamerInfo" width="92" height="125" y="339.01" anchorOffsetX="0" anchorOffsetY="0" skinName="gameSkin.GamerInfo" scaleX="1.25" scaleY="1.25" horizontalCenter="0.5"/>
+		<e:Group id="group_countDown" width="467" height="73" y="670.67" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0.5">
+			<e:BitmapLabel id="countDown_num" width="68" height="46" x="279.16" y="2" anchorOffsetX="0" anchorOffsetY="0" textAlign="left" verticalAlign="middle" font="WaitNum_fnt" scaleX="1.5" scaleY="1.5"/>
+			<e:Label id="countDown_txt" text="" x="38.08" y="8.5" anchorOffsetX="0" width="230" anchorOffsetY="0" height="56" textAlign="right" verticalAlign="middle" textColor="0x1e0303"/>
+		</e:Group>
+		<e:Label text="用户登录" anchorOffsetX="0" width="187.33" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="45" style="labelStroke" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0x038208" stroke="4" verticalAlign="middle" textAlign="center" y="162.66" visible="false" x="223"/>
+	</e:Group>
+	<e:Group id="group_pklevel" width="639" height="1135" y="0" horizontalCenter="-1.5" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image source="common_json.map_bg" y="308.73" anchorOffsetX="0" width="443.91" anchorOffsetY="0" height="339.31" horizontalCenter="0.5" scale9Grid="6,6,38,38"/>
+		<game:ScaleButton id="btn_more" label="再来一局" x="434.77" anchorOffsetX="78.07" anchorOffsetY="16.55" width="177.67" height="73" scaleX="1" scaleY="1" verticalCenter="149">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.key_bg" source.down="common_json.key_bg"/>
+	<e:Label text="再来一局" anchorOffsetX="0" width="187.33" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="35" style="labelStroke" textAlign="center" verticalAlign="middle" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xA57521" stroke="3" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" visible="false"/>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<game:ScaleButton id="btn_leave" label="离开" x="108.96" width="181.66" height="73" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="149">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.key_bg" source.down="common_json.key_bg" source.disabled="common_json.key_bg"/>
+	<e:Label text="离开" anchorOffsetX="0" width="187.33" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="35" style="labelStroke" textAlign="center" verticalAlign="middle" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xA57521" stroke="3" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" visible="false"/>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:Scroller id="balance_scroller" width="417.16" height="281.39" y="364.22" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:List id="balance_rank" x="-0.5" y="-5.64" width="418.67" height="282.91" itemRendererSkinName="gameSkin.PKRankItemSkin" anchorOffsetX="0" anchorOffsetY="0">
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<e:Label text="Rank" x="215.85" y="335.01" textColor="0xff8e00" style="labelStroke"/>
+		<e:Label text="Time" x="287.81" y="335.01" textColor="0xff8300" style="labelStroke"/>
+		<e:Label text="Gold" x="362.28" y="335.01" textColor="0xff8800" style="labelStroke"/>
+		<e:Label text="Level" x="436" y="335.01" textColor="0xff8300" style="labelStroke" anchorOffsetX="0" width="75"/>
+	</e:Group>
+</e:Skin>

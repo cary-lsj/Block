@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.BorderSkin" width="50" height="50" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" states="leftTopMax,leftTopMin,top,rightTopMax,left,right,leftBottomMax,bottom,rightBottomMax,rightTopMin,leftBottomMin,rightBottomMin" >
+	<e:Image source="common_json.map_stro_min" includeIn="rightBottomMin" x="24.8" y="25" rotation="359.94"/>
+	<e:Image source="common_json.map_stro_min" includeIn="leftBottomMin" x="25.2" y="25" rotation="90"/>
+	<e:Image source="common_json.map_stro_min" includeIn="rightTopMin" x="24.3" y="25.5" rotation="269.8"/>
+	<e:Image source="common_json.map_stro_line" rotation.top="0.17" x.top="0" y.top="25" x.left="25" x.right="15.2" rotation.bottom="180.03" y.bottom="25.3" x.rightBottomMax="25" y.rightBottomMax="0" x.bottom="50" includeIn="top,left,right,bottom" rotation.left="269.88" y.left="50" rotation.right="270.01" y.right="50" width.top="52" width.left="52" width.right="52" width.bottom="52"/>
+	<e:Image x.leftTopMax="15" y.leftTopMax="15" y.top="-25" x.leftTopMin="29" y.leftTopMin="27" y.rightTopMax="15.2" x.rightTopMax="35" x.left="-25" x.right="25" x.leftBottomMax="15" y.leftBottomMax="35" y.bottom="25" x.rightBottomMax="35" y.rightBottomMax="35" source="common_json.map_stro_horn" rotation.leftTopMax="359.91" rotation.leftTopMin="180" scaleX.leftTopMin="0.5" scaleY.leftTopMin="0.5" includeIn="leftTopMax,rightTopMax,leftBottomMax,rightBottomMax" rotation.rightTopMax="90.14" rotation.leftBottomMax="270.06" rotation.rightBottomMax="179.95"/>
+	<e:Image source="common_json.map_stro_min" includeIn="leftTopMin" y="25" rotation="179.62" x="25.2"/>
+	<e:Image source="common_json.wood_1" x.leftTopMin="25" y.leftTopMin="25" x.leftTopMax="25" y.leftTopMax="25" visible="false"/>
+</e:Skin>
