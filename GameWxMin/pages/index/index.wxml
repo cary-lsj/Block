@@ -1,1 +1,1 @@
-<button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+<button name="多彩木块" id="btn" class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>

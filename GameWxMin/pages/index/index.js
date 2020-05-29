@@ -4,37 +4,27 @@
 const app = getApp();
 Page({
   /**
-   * 页面的初始数据
-   */
-  data: {
-    userInfo: {},
-    hasUserInfo: false,
-    url: "",
-    userid: ""
-  },
-  /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     var self = this;
     wx.login({
-      success: function(res) {
+      success: function (res) {
         var code = '';
         code = res.code;
         wx.request({
-          url: 'https://www.cxagile.cn/jssdk/wxLogin/getCode.php',
-          data: {
-            code: code
+          url: app.serverip,
+          method: "POST",
+          header: {
+            "Content-Type": "application/x-www-form-urlencoded"
           },
-          success: function(res) {
+          data: {
+            code: JSON.stringify(code)
+          },
+          success: function (res) {
             if (res.statusCode == 200) {
               var data = res.data
               app.globalData.userid = data.openid;
-              // var userinfo = app.globalData.userInfo
-              // var Url = "https://www.cxagile.cn/blockpk/?openid=" + data.openid + "&nickname=" + userinfo.nickName + "&sex=" + userinfo.gender + "&headimgurl=" + userinfo.avatarUrl;
-              // self.setData({
-              //   url: Url
-              // })
             }
           }
         });
@@ -42,47 +32,9 @@ Page({
     });
   },
   /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {},
-
-  /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function(res) {
+  onShareAppMessage: function (res) {
     if (res.from === 'button') {
       // 来自页面内转发按钮
       console.log(res.target)
@@ -98,12 +50,13 @@ Page({
       }
     }
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     // console.log(e)
     app.globalData.userInfo = e.detail.userInfo
+    var url = "https://www.cxagile.cn/blockpk/";
+    // var url = "https://www.cxagile.cn";
     wx.redirectTo({
-      url: "/pages/main/main"
+      url: "/pages/main/main?url="+url
     })
   }
-
 })

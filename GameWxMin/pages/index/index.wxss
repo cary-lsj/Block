@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 page {
-  background-image: url('https://www.cxagile.cn/blockpk/wxImg/bg.png');
+  background-image: url('http://www.cxagile.cn/blockpk/wxImg/bg.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -10,7 +10,7 @@ page {
   height: 900px;
 }
 .btn {
-  background-image: url("https://www.cxagile.cn/blockpk/wxImg/start.png");
+  background-image: url("http://www.cxagile.cn/blockpk/wxImg/start.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 150px;
