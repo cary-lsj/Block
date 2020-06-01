@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.DiamondItemSkin" width="113" height="113" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing"  states="normal,selected" >
+	<e:Image source="common_json.shop_bj" x="0" y="0" width="113" height="113"/>
+	<e:BitmapLabel id="item_num" width="36" height="29" x="62" y="35" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" width.normal="39" height.normal="34" y.normal="10" x.normal="10" font="shopZsNum_fnt" text=""/>
+	<e:BitmapLabel id="item_money" width="75" height="30" y="79" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" font="shopMoneyNum_fnt" textAlign="center" verticalAlign="middle" text=""/>
+	<e:Image source="common_json.diamond_png" x="10.5" y="12" anchorOffsetX="0" width="54" anchorOffsetY="0" height="48"/>
+	<e:Image source="common_json.checked_bj" includeIn="selected" x="0" y="0" width="113" height="113"/>
+	<e:Image source="common_json.checked" includeIn="selected" x="0" y="0" width="113" height="113"/>
+
+</e:Skin>

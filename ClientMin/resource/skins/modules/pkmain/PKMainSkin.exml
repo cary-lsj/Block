@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.PKMainSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*"
+        xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="166a5d02ef6"/>
+	<e:Image source="ocean2_json.资源 17@3x" x="456" y="804"/>
+	<e:Image source="ocean2_json.资源 14@3x" x="133" y="739"/>
+	<e:Image y="694" anchorOffsetY="0" height="220" anchorOffsetX="0" width="634"  source="common_json.woods_bg" scale9Grid="10,10,10,10" horizontalCenter="0"/>
+	<game:MapMainItem id="map" y="290"  x="320"/>
+	
+	<e:Group id="grp_mood" width="640" height="1136">
+	</e:Group>
+	<game:ScaleButton id="btn_menu" label="" x="46" y="26" width="86" height="90" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<game:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_json.return_port-btn"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</game:skinName>
+	</game:ScaleButton>
+	<e:Rect id="map_rect" strokeAlpha="1" fillAlpha="0" anchorOffsetX="0" width="636" anchorOffsetY="0" height="486" x="0" y="168"/>
+	<game:ScaleButton id="btn_key" label="" x="206" y="1009" height="75" width="203" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<game:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_json.key_bg"/>
+			<e:Group id="group" width="223" height="98" x="0" y="0">
+			<e:Image source="common_json.key" x="26.5" y="5" scaleX="1" scaleY="1"/>
+			</e:Group>
+		</e:Skin>
+		</game:skinName>
+	</game:ScaleButton>
+	<e:BitmapLabel id="keynum" width="96" height="44" x="288" text="999" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" font="keyNum_fnt" y="1025" visible="false"/>
+	<e:Label id="gamerSituation_label" text="Label" x="10" y="156" size="25" verticalAlign="middle"/>
+	<e:BitmapLabel id="timebar" width="84" height="68" x="524" y="76" text="50" rotation="359.2" anchorOffsetX="42" anchorOffsetY="34" font="CountDown_fnt" textAlign="center" verticalAlign="middle"/>
+	<game:ScaleButton id="btn_tool_other" label="" x="478" y="959" width="119" height="132">
+		<game:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_json.time_bg_png" source.down="common_json.time_bg_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image source="common_json.minus_time_png" x="29" y="37"/>
+		</e:Skin>
+		</game:skinName>
+	</game:ScaleButton>
+	<game:ScaleButton id="btn_tool_addtime" label="" x="40" y="959" anchorOffsetX="0" width="119" anchorOffsetY="0" height="132">
+		<game:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_json.time_bg_png" source.down="common_json.time_bg_png"/>
+			<e:Image source="common_json.add_time_png" x="29" y="35"/>
+		</e:Skin>
+		</game:skinName>
+	</game:ScaleButton>
+	<e:BitmapLabel id="addTime_Num" width="60" height="27.5" y="1056" anchorOffsetX="0" anchorOffsetY="0" font="WaitNum_fnt" text="25" horizontalCenter="-223" textAlign="center" verticalAlign="middle" scaleX="1.2" scaleY="1.2"/>
+	<e:BitmapLabel id="reduceTime_Num" width="58.83" height="29.17" x="501" y="1055" anchorOffsetX="0" anchorOffsetY="0" font="WaitNum_fnt" text="12" scaleX="1.2" scaleY="1.2" textAlign="center" verticalAlign="middle"/>
+	<e:Scroller width="420" height="130" x="0" y="14" anchorOffsetY="0" anchorOffsetX="0" scrollPolicyH="on" scrollPolicyV="off">
+		<e:List id="gamer_list" height="129" width="420" itemRendererSkinName="gameSkin.GamerInfo" anchorOffsetY="0" anchorOffsetX="0">
+			<e:layout>
+				<e:HorizontalLayout gap="15" horizontalAlign="center" verticalAlign="middle"/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<game:ScaleButton id="btn_refresh" label="Button" x="221" y="945" visible="false"/>
+	<e:Group id="animationGroup" width="429" height="231" x="321" y="553" anchorOffsetX="214" anchorOffsetY="115" visible="false"/>
+</e:Skin>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.SetSkin" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing" width="86" height="238">
+
+	<e:Group id="grp_dialog" width="86" height="238" x="0" y="0" anchorOffsetY="0">
+		<e:Image source="common_json.set_bg" scaleX="1" scaleY="1" top="0" horizontalCenter="0" x="7" y="0"/>
+		<e:Group id="grp_music" width="48" height="48" top="79" horizontalCenter="1" x="20" y="79" scaleX="1" scaleY="1">
+			<e:Image source="common_json.music_on" scaleX="1" scaleY="1" horizontalCenter="-1.5" verticalCenter="-0.5"/>
+			<e:Image id="img_music_off" source="common_json.offplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="grp_sound" width="48" height="48" top="15" horizontalCenter="0" x="19" y="15" scaleX="1" scaleY="1">
+			<e:Image source="common_json.sound_on" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="img_sound_off" source="common_json.offplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Group>
+	</e:Group>
+	<game:ScaleButton id="btn_set" label="" x="0" y="148" width="86" height="90">
+		<game:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_json.button-bg"/>
+	<e:Group id="group" width="86" height="90" x="0" y="0">
+		<e:Image source="common_json.set-btn" x="19.59" y="20.16" scaleX="1" scaleY="1"/>
+	</e:Group>
+		</e:Skin>
+		</game:skinName>
+	</game:ScaleButton>
+</e:Skin>

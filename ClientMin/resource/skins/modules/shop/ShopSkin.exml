@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.ShopSkin" width="640" height="1136"  xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing" >
+	<e:Image source="bg_frame_png" x="50" y="192" anchorOffsetY="0" height="710" anchorOffsetX="0" width="541"/>
+	<game:ScaleButton id="btn_back" label="" x="541" y="238" width="60" height="60">
+		<game:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="common_json.Close"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</game:skinName>
+	</game:ScaleButton>
+	<e:Image id="Tool_title" x="239" y="215" source="common_json.prop_bj" visible="false"/>
+	<e:Image id="Diamond_title" source="common_json.zs_bj" x="239" y="215" visible="false"/>
+	<e:Image source="common_json.total" x="360" y="727.5" visible="false"/>
+	<e:Image x="469" y="723.06" source="common_json.diamond_png" anchorOffsetX="0" width="37.36" anchorOffsetY="0" height="33.88" visible="false"/>
+	<e:Scroller id="sc_group" width="511" height="514" x="64" y="364" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group id="group_box" anchorOffsetX="0" width="513">
+			<e:Group id="group_tool" width="511" height="514" x="0" y="0">
+				<e:Scroller width="440" height="300" x="36" y="1.8799999999999955" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" scaleX="1" scaleY="1">
+					<e:List id="tool_list" requireSelection="true" anchorOffsetY="0" height="135" x="-50.58" y="57.03" itemRendererSkinName="gameSkin.ShopItemSkin">
+					<e:layout>
+						<e:TileLayout horizontalAlign="center" verticalGap="20" orientation="rows" horizontalGap="20" verticalAlign="middle" rowAlign="justifyUsingHeight" columnAlign="justifyUsingWidth"/>
+					</e:layout>
+					</e:List>
+				</e:Scroller>
+				<game:ScaleButton label="" x="47" y="345.22" width="135" height="124" anchorOffsetY="0" anchorOffsetX="0">
+					<game:skinName>
+						<e:Skin states="up,down,disabled" width="138" height="126">
+						<e:Image width="139" height="130" source="common_json.shop_bj" source.down="common_json.shop_bj" scale9Grid="12,12,88,89" anchorOffsetX="0" anchorOffsetY="0" y="-3.22" x="-2"/>
+						<e:Label id="labelDisplay" horizontalCenter="32.5" verticalCenter="64"/>
+	<e:Image source="common_json.group_time" x="8" y="34" anchorOffsetX="0" width="72" anchorOffsetY="0" height="49"/>
+	<e:Image source="common_json.diamond_png" x="22" y="90" anchorOffsetX="0" width="33" anchorOffsetY="0" height="33"/>
+	<e:Image source="common_json.zs_sale" x="75" y="26" anchorOffsetX="0" width="41" anchorOffsetY="0" height="17"/>
+						</e:Skin>
+					</game:skinName>
+				</game:ScaleButton>
+				<game:ScaleButton id="btn_ToolBuy" label="" x="254" y="408" anchorOffsetX="0" anchorOffsetY="0" width="208" height="67">
+					<game:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="common_json.buy_bj"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</game:skinName>
+				</game:ScaleButton>
+				<e:BitmapLabel id="total_money" width="88" height="28" x="343" y="361" anchorOffsetX="0" anchorOffsetY="0" font="shopBuyNum_fnt" textAlign="center" verticalAlign="middle" text=""/>
+				<e:Image source="common_json.total" x="272" y="357" anchorOffsetX="0" width="69" anchorOffsetY="0" height="31"/>
+				<e:Image id="flage_money" source="common_json.diamond_png" x="433" y="361" anchorOffsetX="0" width="31" anchorOffsetY="0" height="31" visible="false"/>
+				<e:Image id="flage_gold" source="common_json.golg_png" x="430" y="360" anchorOffsetX="0" width="34" anchorOffsetY="0" height="29" visible="false"/>
+				<e:BitmapLabel width="41" height="27" x="123" y="400" anchorOffsetX="0" anchorOffsetY="0" text="10" font="shopZsNum_fnt" textAlign="center" verticalAlign="middle"/>
+				<e:BitmapLabel width="49" height="26" x="102.5" y="439" anchorOffsetX="0" anchorOffsetY="0" text="8" textAlign="center" verticalAlign="middle" font="WaitNum_fnt"/>
+				<e:Image source="common_json.first_buy_bj" x="51" y="319" anchorOffsetX="0" width="127"/>
+			</e:Group>
+			<e:Group id="group_diamond" width="513" height="514" x="511" y="0">
+				<game:ScaleButton label="" x="37" y="345.22" width="135" height="124" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1">
+					<game:skinName>
+					<e:Skin states="up,down,disabled" width="138" height="126">
+						<e:Image width="139" height="130" source="common_json.shop_bj" source.down="common_json.shop_bj" scale9Grid="12,12,88,89" anchorOffsetX="0" anchorOffsetY="0" y="-3.22" x="-2"/>
+	<e:Image source="common_json.diamond_png" x="15" y="20"/>
+	<e:Image source="common_json.shop_Num_120" x="56" y="41"/>
+	<e:Image source="common_json.zs_money_big5" y="95" anchorOffsetX="0" width="76" anchorOffsetY="0" height="20" horizontalCenter="0"/>
+					</e:Skin>
+					</game:skinName>
+				</game:ScaleButton>
+				<game:ScaleButton id="btn_diamondBuy" label="" x="254" y="408" anchorOffsetX="0" anchorOffsetY="0" width="208" height="67" scaleX="1" scaleY="1">
+					<game:skinName>
+					<e:Skin states="up,down,disabled">
+						<e:Image width="100%" height="100%" source="common_json.buy_bj"/>
+						<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+					</e:Skin>
+					</game:skinName>
+				</game:ScaleButton>
+				<e:BitmapLabel id="diamond_money" width="56" height="28" x="343" y="361" anchorOffsetX="0" anchorOffsetY="0" font="shopBuyNum_fnt" textAlign="center" verticalAlign="middle" text="" scaleX="1" scaleY="1"/>
+				<e:Image source="common_json.first_buy_bj" x="39" y="319" anchorOffsetX="0" width="127" scaleX="1" scaleY="1"/>
+				<e:Scroller width="440" height="300" y="0" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" scaleX="1" scaleY="1" horizontalCenter="0">
+					<e:List id="diamond_list" requireSelection="true" anchorOffsetY="0" height="135" x="-50.58" y="57.03" itemRendererSkinName="gameSkin.DiamondItemSkin">
+					<e:layout>
+						<e:TileLayout horizontalAlign="center" verticalGap="20" orientation="rows" horizontalGap="20" verticalAlign="middle" rowAlign="justifyUsingHeight" columnAlign="justifyUsingWidth"/>
+					</e:layout>
+					</e:List>
+				</e:Scroller>
+			</e:Group>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

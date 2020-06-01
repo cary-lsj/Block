@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.RankSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="comOne">
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-639}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object x="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="goOne">
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object x="{639}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group id="group" width="639" height="1136" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image anchorOffsetY="0" height="552" anchorOffsetX="0" width="520" verticalCenter="-13" y="89" scaleX="1" scaleY="1" horizontalCenter="4.5" source="bg_frame_png"/>
+		<game:ScaleButton id="btn_close" label="" x="536" y="315" width="58" height="59">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+	<e:Image width="100%" height="100%" source="common_json.Close" x="0" y="0" scaleX="1" scaleY="1"/>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:Scroller id="sc_rank" width="411" height="419" y="384.17" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" horizontalCenter="5" x="73" scaleX="1" scaleY="1">
+			<e:List id="list_rank" itemRendererSkinName="gameSkin.RankItemSkin" anchorOffsetY="0" height="417" x="18" y="0" anchorOffsetX="0" width="411"/>
+		</e:Scroller>
+		<e:Image width="166" height="61" y="283" source="common_json.rank_word" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="3" x="172" scaleX="0.8" scaleY="0.8"/>
+	</e:Group>
+
+</e:Skin>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.RoomSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="create_show">
+			<tween:TweenItem target="{group}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="matching_show">
+			<tween:TweenItem target="{group0}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="jion_room">
+			<tween:TweenItem target="{group1}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Image source="ocean2_json.资源 18@3x" x="244" y="876"/>
+	<e:Image source="ocean2_json.资源 16@3x" x="-20" y="705"/>
+	<e:Group id="group_create_room" width="639" height="1135" x="1" y="1" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group id="group_create" width="518" height="530" y="258" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:EditableText id="text_roomID" width="383" height="60" text="" x="114" y="410" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" textAlign="center" scaleX="1" scaleY="1" backgroundColor="0xf49744" background="true"/>
+			<game:ScaleButton id="btn_create" label="" x="107" y="161" scaleX="1" scaleY="1" width="302" height="97">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.create_room_png" source.down="common_json.create_room_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+			</game:ScaleButton>
+			<game:ScaleButton id="btn_join" label="加入" x="41" y="393.67" width="86" height="90" scaleX="1" scaleY="1">
+				<game:skinName>
+				<e:Skin states="up,down,disabled" width="92.54">
+					<e:Image width="100%" height="100%" source="button-bg" source.down="button-bg"/>
+	<e:Label text="加入" anchorOffsetX="0" width="84.29" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="28" style="labelStroke" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xA57521" stroke="3" horizontalCenter="0" verticalCenter="0" verticalAlign="middle" textAlign="center"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" visible="false"/>
+				</e:Skin>
+				</game:skinName>
+			</game:ScaleButton>
+		</e:Group>
+		<game:ScaleButton id="btn_menu" label="" x="68" y="911" width="86" height="90">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.return_port-btn" source.down="common_json.return_port-btn"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<game:ScaleButton id="btn_rank" label="" x="503" y="911" width="86" height="89">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.button-bg" x="0" y="0" visible="true"/>
+				<e:Group id="group2" width="86" height="90" x="0" y="0">
+				<e:Image width="47" height="41" source="common_json.btn_rank" source.down="common_json.btn_rank" anchorOffsetX="0" anchorOffsetY="0" x="19.67" y="21"/>
+				</e:Group>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:Group id="group_invite" width="518" height="528" x="63" y="259" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+			<game:ScaleButton id="btn_invite" label="邀请好友" y="89.5" anchorOffsetX="0" width="291.97" anchorOffsetY="0" height="100.45" horizontalCenter="-3">
+				<game:skinName>
+					<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="common_json.key_bg"/>
+	<e:Label text="邀请好友" anchorOffsetX="0" width="187.33" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="40" style="labelStroke" textAlign="center" verticalAlign="middle" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xA57521" stroke="3" horizontalCenter="0" verticalCenter="0"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" visible="false"/>
+					</e:Skin>
+				</game:skinName>
+			</game:ScaleButton>
+			<e:EditableText id="show_roomID" width="488" height="80" text="" y="225" anchorOffsetX="0" anchorOffsetY="0" backgroundColor="0xf79e4f" borderColor="0x000000" background="true" verticalAlign="middle" textAlign="center" size="20" horizontalCenter="-4"/>
+			<e:Image id="btn_match" source="common_json.match_room_png" y="382.24" horizontalCenter="0"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="group_wait" width="640" height="1134" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<game:ScaleButton label="" x="30" y="946.5" width="187" height="121">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.grounding_blue_png"/>
+	<e:Label id="labelDisplay" text="" x="99.35" y="38.93" anchorOffsetX="-0.65" anchorOffsetY="-0.07" width="53" height="41" size="20" verticalAlign="middle" textAlign="center"/>
+	<e:Image source="common_json.add_time_png" y="38" x="26"/>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<game:ScaleButton label="" x="390" y="948.5" width="187" height="121">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.grounding_blue_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="33" verticalCenter="0.5" anchorOffsetX="0" anchorOffsetY="0" width="55" height="42" verticalAlign="middle" textAlign="center" size="20"/>
+	<e:Image source="common_json.minus_time_png" x="26" y="34"/>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:Scroller id="sc_gamer" height="430" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="off" horizontalCenter="0" y="215">
+			<e:List id="gamer_list" itemRendererSkinName="gameSkin.GamerInfo" scaleX="1.5" scaleY="1.5" anchorOffsetX="0" x="99" anchorOffsetY="0" height="286" y="0" width="284">
+				<e:layout>
+					<e:TileLayout orientation="rows" horizontalGap="20" verticalGap="20" horizontalAlign="center" columnWidth="130" verticalAlign="justify" rowAlign="justifyUsingHeight" columnAlign="justifyUsingWidth"/>
+				</e:layout>
+			</e:List>
+		</e:Scroller>
+		<game:ScaleButton id="btn_strGame" label="" x="162.5" y="687" width="301" height="97" visible="false">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.star_game_png" source.down="common_json.star_game_png" source.disabled="common_json.star_game_g_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<game:ScaleButton id="btn_return" label="" y="837" width="245" height="80" x="187" visible="false">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.dissolution_room_png" source.down="common_json.dissolution_room_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:BitmapLabel id="addTime_Num" width="44.33" height="31.66" x="126" y="985" anchorOffsetX="0" anchorOffsetY="0" font="WaitNum_fnt" text="12" textAlign="center" verticalAlign="middle" scaleX="1.5" scaleY="1.5"/>
+		<e:BitmapLabel id="reduceTime_Num" width="45.33" height="31.67" x="484" y="986" anchorOffsetX="0" anchorOffsetY="0" text="12" font="WaitNum_fnt" scaleX="1.5" scaleY="1.5" textAlign="center" verticalAlign="middle"/>
+	</e:Group>
+</e:Skin>

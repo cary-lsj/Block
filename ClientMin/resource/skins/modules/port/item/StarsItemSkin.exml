@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.StarsItemSkin" xmlns:e="http://ns.egret.com/eui" states="owen,unowen"  width.owen="20">
+	<e:Image source="common_json.pornotstar" includeIn="unowen" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image source="common_json.porstar" includeIn="owen" horizontalCenter="0" verticalCenter="0"/>
+</e:Skin>

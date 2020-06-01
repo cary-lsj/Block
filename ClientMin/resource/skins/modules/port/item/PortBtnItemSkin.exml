@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.PortBtnItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*" states="lock,unlocked"  width="104" height="118">
+	<w:Declarations>
+	</w:Declarations>
+	<e:Image source="common_json.por_num_bg" includeIn="unlocked" horizontalCenter="0" verticalCenter="0"/>
+	<e:List id="list_star" includeIn="unlocked" itemRenderer="game.StarsItem" y="73" scaleX="1" scaleY="1" x="26" height="20">
+		<e:layout>
+		<e:HorizontalLayout gap="0"/>
+		</e:layout>
+	</e:List>
+	<e:BitmapLabel id="bml_num" width="57" height="52" includeIn="unlocked" x="23" y="21" anchorOffsetX="0" anchorOffsetY="0" verticalAlign="middle" textAlign="center" font="porNum_fnt"/>
+	<game:ScaleButton id="btn_start" useImageSize="true" includeIn="unlocked" width="90" height="100" x="10" y="0">
+	</game:ScaleButton>
+	<e:Image source="common_json.gray-btn" includeIn="lock" verticalCenter="-4.5" horizontalCenter="-2"/>
+	<e:BitmapLabel id="bml_num2" width="57" height="52" includeIn="lock" y="20.5" textAlign="center" verticalAlign="middle" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-0.5" font="porNum_fnt"/>
+
+</e:Skin>

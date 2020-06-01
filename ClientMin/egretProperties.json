@@ -1,0 +1,55 @@
+{
+  "engineVersion": "5.3.5",
+  "compilerVersion": "5.3.5",
+  "template": {},
+  "target": {
+    "current": "web"
+  },
+  "eui": {
+    "exmlRoot": [
+      "resource/skins"
+    ],
+    "themes": [
+      "resource/default.thm.json"
+    ],
+    "exmlPublishPolicy": "commonjs"
+  },
+  "modules": [
+    {
+      "name": "egret"
+    },
+    {
+      "name": "eui"
+    },
+    {
+      "name": "assetsmanager"
+    },
+    {
+      "name": "tween"
+    },
+    {
+      "name": "game"
+    },
+    {
+      "name": "dragonBones"
+    },
+    {
+      "name": "promise"
+    },
+    {
+      "name": "socket"
+    },
+    {
+      "name": "particle",
+      "path": "../particle"
+    },
+    {
+      "name": "protobuf-library",
+      "path": "protobuf/library"
+    },
+    {
+      "name": "protobuf-bundles",
+      "path": "protobuf/bundles"
+    }
+  ]
+}

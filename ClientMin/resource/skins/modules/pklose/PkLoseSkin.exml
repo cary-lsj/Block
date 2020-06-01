@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.PkLoseSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="bg_frame_png" horizontalCenter="0" verticalCenter="0"/>
+	<game:ScaleButton label="Button" x="103.15" y="910.45"/>
+</e:Skin>

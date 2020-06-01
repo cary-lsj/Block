@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.SceneSkin" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="img_bg_png" right="0" bottom="0" top="0" left="0"/>
+</e:Skin>

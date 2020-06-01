@@ -1,0 +1,63 @@
+{
+	"skins": {
+		"eui.Button": "resource/skins/common/ButtonSkin.exml",
+		"game.ScaleButton": "resource/skins/common/ButtonSkin.exml",
+		"game.Square": "resource/skins/common/SquareSkin.exml",
+		"game.TestView": "resource/skins/modules/test/TestSkin.exml",
+		"game.SceneView": "resource/skins/modules/scene/SceneSkin.exml",
+		"game.TestItem": "resource/skins/modules/test/item/TestItemSKin.exml",
+		"game.TestComponent": "resource/skins/modules/test/item/TestItemSKin.exml",
+		"game.Shapea": "resource/skins/shape/ShapeaSkin.exml",
+		"game.MapBaseItem": "resource/skins/modules/main/MapSkin.exml",
+		"game.BorderItem": "resource/skins/modules/main/BorderSkin.exml",
+		"game.PortBtnItem": "resource/skins/modules/port/item/PortBtnItemSkin.exml",
+		"game.StarsItem": "resource/skins/modules/port/item/StarsItemSkin.exml",
+		"game.SetView": "resource/skins/modules/set/SetSkin.exml",
+		"game.ToolView": "resource/skins/modules/tool/ToolSkin.exml",
+		"game.AdView": "resource/skins/modules/Ad/AdSkin.exml",
+		"game.RankItem": "resource/skins/modules/rank/RankItemSkin.exml"
+	},
+	"autoGenerateExmlsList": true,
+	"styles": {
+		"labelStroke": {
+			"stroke": 1,
+			"strokeColor": "0x000000",
+			"fontFamily": "SimHei"
+		}
+	},
+	"exmls": [
+		"resource/skins/common/ButtonSkin.exml",
+		"resource/skins/common/SquareSkin.exml",
+		"resource/skins/modules/Ad/AdSkin.exml",
+		"resource/skins/modules/humor/HumorSkin.exml",
+		"resource/skins/modules/login/LoginSkin.exml",
+		"resource/skins/modules/main/BorderSkin.exml",
+		"resource/skins/modules/main/MainSkin.exml",
+		"resource/skins/modules/main/MapSkin.exml",
+		"resource/skins/modules/menu/MenuSkin.exml",
+		"resource/skins/modules/msg/msgSkin.exml",
+		"resource/skins/modules/pklose/PkLoseSkin.exml",
+		"resource/skins/modules/pkmain/PKMainSkin.exml",
+		"resource/skins/modules/pkwin/PKWinSkin.exml",
+		"resource/skins/modules/port/PortSkin.exml",
+		"resource/skins/modules/room/RoomSkin.exml",
+		"resource/skins/modules/rank/RankItemSkin.exml",
+		"resource/skins/modules/rank/RankSkin.exml",
+		"resource/skins/modules/scene/SceneSkin.exml",
+		"resource/skins/modules/shop/ShopSkin.exml",
+		"resource/skins/modules/set/SetSkin.exml",
+		"resource/skins/modules/test/DemoTest.exml",
+		"resource/skins/modules/test/TestSkin.exml",
+		"resource/skins/modules/tool/ToolSkin.exml",
+		"resource/skins/modules/win/WinSkin.exml",
+		"resource/skins/modules/pkmain/item/GamerInfo.exml",
+		"resource/skins/modules/pkwin/item/PKRankItemSkin.exml",
+		"resource/skins/modules/port/item/PortBtnItemSkin.exml",
+		"resource/skins/modules/port/item/StarsItemSkin.exml",
+		"resource/skins/modules/shop/item/DiamondItemSkin.exml",
+		"resource/skins/modules/shop/item/ShopItemSkin.exml",
+		"resource/skins/modules/test/item/TestItemSKin.exml",
+		"resource/skins/modules/tool/item/GamerHeadSkin.exml"
+	],
+	"path": "resource/default.thm.json"
+}

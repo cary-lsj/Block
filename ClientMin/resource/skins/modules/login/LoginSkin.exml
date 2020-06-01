@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.LoginSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="639" height="1137" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Rect width="432" height="454" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xf9bd81" strokeAlpha="0.6" horizontalCenter="0" verticalCenter="0" visible="false"/>
+		<e:Image source="common_json.map_bg" x="113" anchorOffsetX="0" width="418" anchorOffsetY="0" height="510" verticalCenter="0" visible="false"/>
+		<e:Image source="bg_frame_png" verticalCenter="-14" anchorOffsetX="0" width="477.33" anchorOffsetY="0" horizontalCenter="1" height="521"/>
+		<game:ScaleButton id="btn_login" label="确定" anchorOffsetX="0" width="145" anchorOffsetY="0" height="66" verticalCenter="141.5" horizontalCenter="-1">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.key_bg"/>
+	<e:Label text="确定" anchorOffsetX="0" width="187.33" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="30" style="labelStroke" textAlign="center" verticalAlign="middle" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xA57521" stroke="3" horizontalCenter="0" verticalCenter="0"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" visible="false"/>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:EditableText  id="text_username" width="267.67" height="53"   text="" anchorOffsetX="0" anchorOffsetY="0" backgroundColor="0xeda923" background="true" verticalAlign="middle" textAlign="center" verticalCenter="-45" horizontalCenter="55.5" border="false" borderColor="0x1af409" bold="true" blendMode="normal" cacheAsBitmap="true" strokeColor="0x00ffde"/>
+		<e:Label text="用户登录" y="297" anchorOffsetX="0" width="144.66" anchorOffsetY="0" height="52.67" bold="true" size="35" textAlign="center" horizontalCenter="0" verticalAlign="middle" visible="false"/>
+		<e:Label text="用户登录" anchorOffsetX="0" width="187.33" anchorOffsetY="0" height="52.67" fontFamily="SimHei" size="36" style="labelStroke" bold="true" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0x038208" stroke="4" horizontalCenter="5" verticalCenter="-245" verticalAlign="middle" textAlign="center"/>
+		<e:Label text="账号：" x="124.33" y="501.67" anchorOffsetY="0" height="50.33" textColor="0xffffff" size="40" fontFamily="SimHei" borderColor="0xedac15" border="false" bold="false" backgroundColor="0xffa900" background="false" anchorOffsetX="0" width="161.34" strokeColor="0xe0b523" stroke="5"/>
+	</e:Group>
+</e:Skin>

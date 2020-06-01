@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameSkin.msgSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="544" height="273" y="449" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:Image source="common_json.shop_bj" x="0" y="0" scale9Grid="14,14,85,85" anchorOffsetX="0" width="544" anchorOffsetY="0" height="273"/>
+		<game:ScaleButton id="btn_close" label="确定" y="205" anchorOffsetX="0" width="141" anchorOffsetY="0" height="59" horizontalCenter="0">
+			<game:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.key_bg" source.down="common_json.key_bg"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:Label id="msg_txt" text="" y="54.5" verticalAlign="middle" textAlign="center" height="82" anchorOffsetX="0" width="402" size="40" horizontalCenter="0" textColor="0xba6f09"/>
+	</e:Group>
+</e:Skin>
