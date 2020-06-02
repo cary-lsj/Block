@@ -1,2 +1,4 @@
 /Client/bin-release
 /Client/bin-debug
+/ClientMin/bin-release
+/ClientMin/bin-debug
