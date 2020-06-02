@@ -7,7 +7,7 @@ declare module gameSkin{
 	}
 }
 declare module gameSkin{
-	class LoginSkin extends eui.Skin{
+	class AdSkin extends eui.Skin{
 	}
 }
 declare module gameSkin{
@@ -15,7 +15,11 @@ declare module gameSkin{
 	}
 }
 declare module gameSkin{
-	class AdSkin extends eui.Skin{
+	class LoginSkin extends eui.Skin{
+	}
+}
+declare module gameSkin{
+	class MenuSkin extends eui.Skin{
 	}
 }
 declare module gameSkin{
@@ -28,10 +32,6 @@ declare module gameSkin{
 }
 declare module gameSkin{
 	class MapSkin extends eui.Skin{
-	}
-}
-declare module gameSkin{
-	class MenuSkin extends eui.Skin{
 	}
 }
 declare module gameSkin{
@@ -67,6 +67,10 @@ declare module gameSkin{
 	}
 }
 declare module gameSkin{
+	class SceneSkin extends eui.Skin{
+	}
+}
+declare module gameSkin{
 	class SetSkin extends eui.Skin{
 	}
 }
@@ -75,15 +79,7 @@ declare module gameSkin{
 	}
 }
 declare module gameSkin{
-	class SceneSkin extends eui.Skin{
-	}
-}
-declare module gameSkin{
 	class TestSkin extends eui.Skin{
-	}
-}
-declare module gameSkin{
-	class WinSkin extends eui.Skin{
 	}
 }
 declare module gameSkin{
@@ -91,7 +87,15 @@ declare module gameSkin{
 	}
 }
 declare module gameSkin{
+	class WinSkin extends eui.Skin{
+	}
+}
+declare module gameSkin{
 	class GamerInfo extends eui.Skin{
+	}
+}
+declare module gameSkin{
+	class PKRankItemSkin extends eui.Skin{
 	}
 }
 declare module gameSkin{
@@ -100,10 +104,6 @@ declare module gameSkin{
 }
 declare module gameSkin{
 	class StarsItemSkin extends eui.Skin{
-	}
-}
-declare module gameSkin{
-	class PKRankItemSkin extends eui.Skin{
 	}
 }
 declare module gameSkin{

@@ -17,15 +17,13 @@
 	"game": [
 		"bin-debug/game/core/mvc/control/Notifier.js",
 		"bin-debug/game/core/mvc/control/observer/Observer.js",
-		"bin-debug/protocolGen/NetSender.js",
 		"bin-debug/game/core/manager/fullWindow/FullWindowBase.js",
-		"bin-debug/game/core/mvc/control/command/Command.js",
 		"bin-debug/game/core/mvc/model/AbstractProxy.js",
 		"bin-debug/game/core/mvc/view/AbstractMediator.js",
 		"bin-debug/game/modules/main/view/item/MapBaseItem.js",
 		"bin-debug/protocolGen/HttpSender.js",
-		"bin-debug/game/core/extends/Extends.js",
-		"bin-debug/game/core/mvc/control/command/CommandQueue.js",
+		"bin-debug/protocolGen/NetSender.js",
+		"bin-debug/game/core/mvc/control/command/Command.js",
 		"bin-debug/game/core/manager/dialog/DialogBase.js",
 		"bin-debug/game/modules/humor/event/HumorEvent.js",
 		"bin-debug/game/core/mvc/facade/Facade.js",
@@ -34,7 +32,7 @@
 		"bin-debug/game/modules/ad/event/AdEvent.js",
 		"bin-debug/game/constants/NotifyConst.js",
 		"bin-debug/game/modules/login/event/LoginEvent.js",
-		"bin-debug/game/modules/main/event/MainEvent.js",
+		"bin-debug/game/core/mvc/control/command/CommandQueue.js",
 		"bin-debug/game/modules/main/view/MainFullWindow.js",
 		"bin-debug/game/core/manager/resource/ResMgrBase.js",
 		"bin-debug/game/modules/main/view/item/MoodBase.js",
@@ -49,6 +47,8 @@
 		"bin-debug/game/mvc/MediatorBase.js",
 		"bin-debug/game/mvc/ProxyBase.js",
 		"bin-debug/game/constants/ProxyID.js",
+		"bin-debug/game/modules/main/event/MainEvent.js",
+		"bin-debug/game/core/extends/Extends.js",
 		"bin-debug/game/data/rank/RankVO.js",
 		"bin-debug/game/core/global/GlobalInfo.js",
 		"bin-debug/game/core/http/HttpRequest.js",
@@ -121,7 +121,7 @@
 		"bin-debug/game/data/port/PortListVO.js",
 		"bin-debug/game/data/port/PortVO.js",
 		"bin-debug/game/data/rank/RankListVo.js",
-		"bin-debug/game/context/InitCommand.js",
+		"bin-debug/protocolGen/ServerIP.js",
 		"bin-debug/game/data/room/RoomVO.js",
 		"bin-debug/game/enums/GenderType.js",
 		"bin-debug/game/enums/PortType.js",
@@ -227,6 +227,6 @@
 		"bin-debug/game/core/global/Global.js",
 		"bin-debug/game/core/global/GlobalConfig.js",
 		"bin-debug/protocolGen/Route.js",
-		"bin-debug/protocolGen/ServerIP.js"
+		"bin-debug/game/context/InitCommand.js"
 	]
 }
