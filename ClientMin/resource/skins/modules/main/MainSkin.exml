@@ -18,7 +18,7 @@
 	<e:Image id="img_starbg" source="common_json.starnum_bg" x="367" y="76" width="212" height="85"/>
 	<e:BitmapLabel id="starnum" width="96" height="31" x="455" font="porStarNum_fnt" text="100" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" y="104"/>
 	<e:Rect id="map_rect" strokeAlpha="1" fillAlpha="0" anchorOffsetX="0" width="636" anchorOffsetY="0" height="486" x="2" y="168.5"/>
-	<game:ScaleButton id="btn_key" label="" x="209" y="975" height="98" width="223">
+	<game:ScaleButton id="btn_key" label="" x="209" y="975" height="98" width="223" visible="false">
 		<game:skinName>
 		<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="common_json.key_bg"/>

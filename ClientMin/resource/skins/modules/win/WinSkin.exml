@@ -128,7 +128,7 @@
 				</e:Skin>
 			</game:skinName>
 		</game:ScaleButton>
-		<game:ScaleButton id="btn_again" label="" x="272" y="719"  width="86" height="89">
+		<game:ScaleButton id="btn_again" label="" x="427" y="718"  width="86" height="89">
 			<game:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="common_json.button-bg" x="0" y="0"/>
@@ -138,7 +138,7 @@
 				</e:Skin>
 			</game:skinName>
 		</game:ScaleButton>
-		<game:ScaleButton id="btn_rank" label="" x="427" y="718" width="86" height="89" >
+		<game:ScaleButton id="btn_rank" label="" x="272" y="719" width="86" height="89"  visible="false">
 			<game:skinName>
 				<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="common_json.button-bg" x="0" y="0" visible="true"/>

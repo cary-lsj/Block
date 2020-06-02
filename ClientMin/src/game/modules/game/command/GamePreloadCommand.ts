@@ -8,7 +8,7 @@ namespace game {
         public model: LoginProxy;
 
         public execute(notifyName: string | NotifyConst): void {
-            ResourceManager.instance;
+            // ResourceManager.instance;
 
             $stage.addChild(new GameView());
 
