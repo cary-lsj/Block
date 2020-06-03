@@ -31,8 +31,50 @@ class WxgamePlatform {
             })
         })
     }
-}
+    share() {
+        return new Promise((resolve, reject) => {
+            wx.shareAppMessage({
+                title: '来和我一起探索海洋砖块',
+                imageUrlId: "WUxTzsl2Rl+yMPc/eNcnDg==",
+                imageUrl:"https://mmocgame.qpic.cn/wechatgame/V5B1LvusacibqDG8eHVylJJMjl3fswGN3qxGnCe908oiaxtib7OprD1iaatG6Km7vF2N/0"
+            })
+        })
+    }
 
+     // 开放域获取好友排行
+   getFriendCloudStorage() {
+        return new Promise((resolve, reject) => {
+            wx.getFriendCloudStorage({
+                keyList: ["socre", "date"],
+                success: (res) => {
+                    console.log(res);
+                    resolve(res);
+                },
+                fail(err) {
+                    reject(err);
+                }
+            })
+        })
+    }
+
+   setKVData(data) {
+        return new Promise((resolve, reject) => {
+            let dataList = [];
+            for (let key in data) {
+                dataList.push({ key: key, value: data[key] });
+            }
+            wx.setUserCloudStorage({
+                KVDataList: dataList,
+                success: (res) => {
+                    resolve(res);
+                },
+                fail: (err) => {
+                    reject(err);
+                }
+            });
+        });
+    }
+}
 
 class WxgameOpenDataContext {
 

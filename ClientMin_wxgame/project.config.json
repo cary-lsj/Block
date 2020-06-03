@@ -26,6 +26,8 @@
 	"libVersion": "game",
 	"appid": "wx97a0264b06970cb6",
 	"projectname": "blockMin",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

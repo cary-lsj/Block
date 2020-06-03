@@ -1,6 +1,6 @@
 require('./weapp-adapter.js');
+require('./configSetting.js')
 require('./platform.js');
-require('./configSetting.js');
 require('./manifest.js');
 require('./egret.wxgame.js');
 
