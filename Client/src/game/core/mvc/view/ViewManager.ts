@@ -10,7 +10,7 @@
             return ViewManager._instance || (ViewManager._instance = new ViewManager());
         }
 
-        private _classMap: {[k: string]: {new(): IMediator<egret.DisplayObject>}};
+        private _classMap: { [k: string]: { new(): IMediator<egret.DisplayObject> } };
         private _viewMap: Dictionary<egret.DisplayObject, IMediator<egret.DisplayObject>>;
         private _contextView: egret.DisplayObjectContainer;
 
@@ -69,9 +69,9 @@
             viewObject.once(egret.Event.REMOVED_FROM_STAGE, this.onViewRemoved, this);
             let mediatorClass = this._classMap[key];
             let mediator = recyclable(mediatorClass);
+            this._viewMap.add(viewObject, mediator);
             mediator.view = viewObject;
             mediator.onRegister();
-            this._viewMap.add(viewObject, mediator);
         }
 
         private onViewRemoved(event: egret.Event): void {
@@ -90,11 +90,11 @@
             }
             let mediator = this._viewMap.get(viewObject);
             mediator.onRemove();
-            (<Recyclable<IMediator<egret.DisplayObject>>> mediator).recycle();
+            (<Recyclable<IMediator<egret.DisplayObject>>>mediator).recycle();
             this._viewMap.remove(viewObject);
         }
 
-        public registerMediator<T extends egret.DisplayObject>(viewClass: {new(): T}, mediatorClass: {new(): IMediator<T>}): void {
+        public registerMediator<T extends egret.DisplayObject>(viewClass: { new(): T }, mediatorClass: { new(): IMediator<T> }): void {
             if (!viewClass || !mediatorClass) {
                 throw new Error("参数不能为空！");
             }
@@ -103,19 +103,19 @@
                 throw new Error("映射已经存在，不能重复添加映射关系！");
             }
             this._classMap[key] = mediatorClass;
-            (<any> viewClass).__isMediatorView = true;
+            (<any>viewClass).__isMediatorView = true;
         }
 
-        public hasMediator<T extends egret.DisplayObject>(viewClass: {new(): T}): boolean {
+        public hasMediator<T extends egret.DisplayObject>(viewClass: { new(): T }): boolean {
             let key = egret.getQualifiedClassName(viewClass);
             return this._classMap.hasOwnProperty(key);
         }
 
         public getMediator<T extends egret.DisplayObject>(viewObject: T): IMediator<T> {
-            return <IMediator<T>> this._viewMap.get(viewObject);
+            return <IMediator<T>>this._viewMap.get(viewObject);
         }
 
-        public removeMediator<T extends egret.DisplayObject>(viewClass: {new(): T}, mediatorClass: {new(): IMediator<T>}): void {
+        public removeMediator<T extends egret.DisplayObject>(viewClass: { new(): T }, mediatorClass: { new(): IMediator<T> }): void {
             if (!viewClass || !mediatorClass) {
                 throw new Error("参数不能为空！");
             }
