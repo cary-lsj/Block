@@ -4,18 +4,18 @@ namespace game {
      */
     export class MainFullWindow extends FullWindowBase<any> implements IModuleView {
 
-        public map:game.MapMainItem;
-        public grp_mood:eui.Group;
-        public btn_menu:game.ScaleButton;
-        public img_starbg:eui.Image;
-        public starnum:eui.BitmapLabel;
-        public map_rect:eui.Rect;
-        public btn_key:game.ScaleButton;
-        public keynum:eui.BitmapLabel;
-        public btn_refresh:game.ScaleButton;
-        public btn_setup:game.SetView;
+        public map: game.MapMainItem;
+        public grp_mood: eui.Group;
+        public btn_menu: game.ScaleButton;
+        public img_starbg: eui.Image;
+        public starnum: eui.BitmapLabel;
+        public map_rect: eui.Rect;
+        public btn_key: game.ScaleButton;
+        public keynum: eui.BitmapLabel;
+        public btn_refresh: game.ScaleButton;
+        public btn_setup: game.SetView;
         private _moodX: number;
-        public constructor(test="gameSkin.MainSkin") {
+        public constructor(test = "gameSkin.MainSkin") {
             super(test);
         }
         protected createComponent(): any {
@@ -28,7 +28,7 @@ namespace game {
             this.btn_refresh.on(egret.TouchEvent.TOUCH_TAP, this.onRefreshClick, this);
             this.btn_key.on(egret.TouchEvent.TOUCH_TAP, this.onKeyClick, this);
             this.btn_key.group.addChild(this.keynum);
- 
+
         }
 
         protected onMenuClick(): void {
@@ -41,11 +41,11 @@ namespace game {
             this.dispatch(MainEvent.clickKey, true)
         }
         public updateData(data: GamePortVO) {
-            let mapdata = this.map.data = data.GameMapVO.mapData;
+            this.map.data = data.GameMapVO.mapData;
 
             //map居中
-            this.map.x = (this.width - this.map.width) / 2;
-            this.map.y = this.height / 56 * 23 - (this.map.height / 2);
+            this.map.x = (640 - this.map.width) / 2;
+            this.map.y = 1136 / 56 * 23 - (this.map.height / 2);
             this.map_rect.visible = false;
 
             this.refreshList(data.moodListVO);
@@ -53,27 +53,23 @@ namespace game {
         //渲染木块
         public refreshList(data: MapVO[]): void {
             //打乱木块顺序 保证渲染出来是随机的
-            data.sort((a,b)=>{return Math.random()>.5 ? -1 : 1;});
+            let i = data.length;
+            // 注释不规范代码
+            // data.sort((a, b) => { return Math.random() > .5 ? -1 : 1; });
+            while (i) {
+                let j = Math.floor(Math.random() * i--);
+                [data[i], data[j]] = [data[j], data[i]];
+            }
 
-            let starmoodx = this.getGenWidth(data);
-           //遍历 保证所有的木块都能被渲染
+            this.getGenWidth(data);
+            //遍历 保证所有的木块都能被渲染
             for (let i = 0; i < data.length; i++) {
-               
+
                 let vo = data[i];
                 this.setcoloer(vo, i);
                 //创建一个 木块对象
                 let mood: MapMoodItem = this.refresh_mapmood(vo);
-                
-                // if (this._moodX > 540) {
-                //     mood.x = starmoodx;
-                //     starmoodx += (vo.colGrids + 1) * MapUtil.mapGridWidth * 0.7;
-                //     mood.y = mood.y - 10 - vo.rowGrids * MapUtil.mapGridWidth * 0.7;
-                // } else {
-                //     mood.y = 750;
-                //     mood.x = this._moodX;
-                //     this._moodX += (vo.colGrids + 1) * MapUtil.mapGridWidth * 0.7;
-                // }
-               
+
                 //设置木块位置信息
                 mood.y = 750;
                 mood.x = this._moodX;

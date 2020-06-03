@@ -154,7 +154,7 @@
 		<e:Image id="image0" x="246" y="211" alpha="0" source="common_json.star"/>
 		<e:Image id="image1" x="246" y="211" alpha="0" source="common_json.star"/>
 		<e:Image id="image2" x="246" y="211" alpha="0" source="common_json.star"/>
-		<game:ScaleButton id="btn_ad" label="" y="575" anchorOffsetY="0" height="95" anchorOffsetX="0" width="300" x="165" scaleX="1" scaleY="1">
+		<game:ScaleButton id="btn_ad" label="" y="575" anchorOffsetY="0" height="95" anchorOffsetX="0" width="300" x="165" scaleX="1" scaleY="1" visible="false">
 			<game:skinName>
 			<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="common_json.key_bg"/>
@@ -164,7 +164,17 @@
 			</e:Skin>
 			</game:skinName>
 		</game:ScaleButton>
-		<e:Image id="image3" source="common_json.key" x="200" scaleX="1" scaleY="1" width="49" height="55" verticalCenter="0"/>
+		<game:ScaleButton id="btn_share" label="" y="575" anchorOffsetY="0" height="95" anchorOffsetX="0" width="300" scaleX="1" scaleY="1" x="170">
+			<game:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="common_json.key_bg"/>
+				<e:Group id="group" width="300" height="95" x="0" y="0">
+					<e:Label text="分享给朋友" fontFamily="SimHei" size="45" style="labelStroke" textAlign="center" verticalAlign="middle" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xA57521" stroke="3" verticalCenter="0" horizontalCenter="0" x="121" y="35" scaleX="1" scaleY="1"/>
+				</e:Group>
+			</e:Skin>
+			</game:skinName>
+		</game:ScaleButton>
+		<e:Image id="image3" source="common_json.key" x="200" scaleX="1" scaleY="1" width="49" height="55" verticalCenter="0" visible="false"/>
 	</e:Group>
 	
     

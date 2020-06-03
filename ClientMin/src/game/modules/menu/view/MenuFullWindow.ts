@@ -8,19 +8,22 @@ namespace game {
         public btn_start: game.ScaleButton;
         public btn_rank: game.ScaleButton;
         public btn_shop: game.ScaleButton;
-        public grp_dw:eui.Group;
-        public DiamondText:eui.BitmapLabel;
-        public GoldText:eui.BitmapLabel;
+        public grp_dw: eui.Group;
+        public DiamondText: eui.BitmapLabel;
+        public GoldText: eui.BitmapLabel;
+        public btn_share: game.ScaleButton;
 
 
         public constructor() {
             super("gameSkin.MenuSkin");
             game.SoundManager.getInstance();//播放背景音乐
         }
+
         protected createComponent(): any {
             return undefined;
 
         }
+
         protected childrenCreated(): void {
             super.childrenCreated();
 
@@ -32,8 +35,10 @@ namespace game {
             this.btn_fight.on(egret.TouchEvent.TOUCH_TAP, this.onFightClick, this);
             this.btn_continue.on(egret.TouchEvent.TOUCH_TAP, this.onContinueClick, this);
             this.btn_shop.on(egret.TouchEvent.TOUCH_TAP, this.onShopClick, this);
+            this.btn_share.on(egret.TouchEvent.TOUCH_TAP, this.onShareClick, this);
             this.updateAssets();
         }
+
         private onFightClick(e: egret.TouchEvent): void {
             this.dispatch(MenuEvent.clickFight, true);
         }
@@ -45,19 +50,26 @@ namespace game {
         private onStartClick(e: egret.TouchEvent): void {
             this.dispatch(MenuEvent.clickStart, true);
         }
+
         private onRankClick(e: egret.TouchEvent): void {
             this.dispatch(MenuEvent.clickRank, true);
         }
+
         private onShopClick(e: egret.TouchEvent): void {
             this.dispatch(MenuEvent.clickShop, true);
         }
-        public updateAssets(){
+
+        private onShareClick() {
+            platform.share();
+        }
+
+        public updateAssets() {
             this.DiamondText.text = '0';
             this.GoldText.text = '0';
 
-            if($userData.playerVO.nMoney !== undefined)
+            if ($userData.playerVO.nMoney !== undefined)
                 this.DiamondText.text = $userData.playerVO.nMoney.toString();
-            if($userData.playerVO.nGold !== undefined)
+            if ($userData.playerVO.nGold !== undefined)
                 this.GoldText.text = $userData.playerVO.nGold.toString();
         }
     }

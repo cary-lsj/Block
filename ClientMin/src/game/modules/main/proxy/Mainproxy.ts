@@ -42,7 +42,7 @@ namespace game {
 
         }
         public userprompt() {
-            this._senderHttp.send_Use_Prompt();
+            // this._senderHttp.send_Use_Prompt();
         }
         @InterestMessage(gameMsg.EnumMsg.usepromptresponse)
         private usepromptresponse(e?: egret.Event) {

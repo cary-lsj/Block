@@ -93,7 +93,10 @@ namespace game {
             return this.portList[id - 1];
         }
 
-        public setPort(port: number = 0) {
+        public setPort(port) {
+            if (!port || port == "null") {
+                port = 0;
+            }
             setItem("port", port);
             let list = this.portList;
             for (let i = 0; i < list.length - 1; i++) {
@@ -102,6 +105,7 @@ namespace game {
                     list[i + 1].state = PortType.unlocked;
                 }
             }
+            this.starNum = (port * 3) + "";
         }
     }
 }

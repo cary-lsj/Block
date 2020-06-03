@@ -8,7 +8,7 @@ namespace game {
         public map: MapVO;
         /** 地图 渲染数据 */
         public mapData: MapVO;
-        
+
         public init(rowGrids: number, colGrids: number) {
             this.map = new MapVO
             this.map.rowGrids = rowGrids;
@@ -20,10 +20,12 @@ namespace game {
             this.mapData.colGrids = colGrids + 2;
             this.mapData.initMap();
         }
+
         public update(vo: MapVO) {
             this.updateMap(vo);
             this.updateDataMap(vo);
         }
+
         public updateMap(vo: MapVO) {
             let map = vo.data;
             for (let i = 0; i < map.length; i++) {

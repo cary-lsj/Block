@@ -28,19 +28,18 @@ namespace game {
 
         @InterestNotify(NotifyConst.gameStart)
         private gameStart() {
-            let mapData = $userData.gamePortVO;
-            this._view.updateData(mapData);
+            this.gameAgain();
             //启用开始协议
             this.model.gamebegin();
             this._view.starnum.text = $userData.portList.starNum;
         }
         @InterestNotify(NotifyConst.updateKey)
         public updateKey() {
-            this._view.keynum.text = $userData.portList.keyNum;
+            // this._view.keynum.text = $userData.portList.keyNum;
         }
         @InterestNotify(NotifyConst.updateStar)
-        public updateStar(){
-            this._view.starnum.text=$userData.portList.starNum;
+        public updateStar() {
+            this._view.starnum.text = $userData.portList.starNum;
         }
         //修改游戏场景地图数据，并检测是否完成
         @InterestEvent(MainEvent.addMood)
@@ -193,16 +192,17 @@ namespace game {
             SoundManager.getInstance().PlaySound(SoundManager.mClickAudioUrl);
             this.gameAgain();
         }
+
         /**监听 钥匙 */
         @InterestEvent(MainEvent.clickKey)
         private clickKey(): void {
             SoundManager.getInstance().PlaySound(SoundManager.mClickAudioUrl);
-            // this._view.btn_key.touchEnabled=false;
-            let keynum: number = parseInt($userData.portList.keyNum);
-            if (keynum < 1) {
-                console.log("提示机会不足！");
-                return;
-            }
+            this.model.userprompt();
+            platform.share();
+            egret.setTimeout(this.showkeymood, this, 500);
+        }
+
+        private showkeymood() {
             let port = $userData.gamePortVO.curPort;
             let mapmoodData = port.moodListVO;
             let key: number = 0;   //记录值，点击一次只提示一个
@@ -213,7 +213,7 @@ namespace game {
                     if (map_mood.data.col < port.mapVO.colGrids && map_mood.data.row < port.mapVO.rowGrids && map_mood.data.col > 0 && map_mood.data.row > 0) {
                         map_mood.removemood();
                         map_mood.restart();
-                    }                  
+                    }
                     if (key == 0) {
                         key = 1;
                         let mood: KeyMoodItem = this._view.refresh_keymood(mapmoodData[i]);
@@ -223,15 +223,9 @@ namespace game {
                         this.useKey = i + 1;
                     }
                 }
-                if (i == mapmoodData.length - 1 && key == 0) {
-                    console.log("已过关！")
-                    return;
-                }
             }
-            keynum -= 1;
-            $userData.portList.updateKeyNum(keynum);
-            this.model.userprompt();
         }
+
         @InterestNotify(NotifyConst.gameAgain)
         public gameAgain(): void {
             //清除木块和地图
@@ -241,8 +235,7 @@ namespace game {
             this.useKey = 0;
             let mapData = $userData.gamePortVO;
             $userData.gamePortVO.GameMapVO.update(mapData.curPort.mapVO);
-            // this._view.updateData(mapData);
-            this.gameStart();
+            this._view.updateData(mapData);
         }
     }
 }

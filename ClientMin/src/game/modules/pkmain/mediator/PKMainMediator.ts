@@ -1,31 +1,31 @@
 namespace game {
-	export class PKMainMediator extends MediatorBase<PKMainFullWindow> {
+    export class PKMainMediator extends MediatorBase<PKMainFullWindow> {
 
         @InjectProxy(ProxyID.pkmain)
         public model: PkMainproxy;
         private _GamerInfo = $singlon(GamerInfoCFG);
 
-		public onRegister(): void {
-			super.onRegister();
+        public onRegister(): void {
+            super.onRegister();
             this.gameStart();
             // this._view.initMood();
             this._view.showGamerInfo();
-		}
-		@InterestEvent(PKMainEvent.clickMenu)
-		public clickMenu(): void {
-			SoundManager.getInstance().PlaySound(SoundManager.mClickAudioUrl);
-			// this._view.grp_mood.removeChildren();
-			// this._view.map.removeChildren();
-			// $facade.addModule(ModuleID.menu);
-		}
+        }
+        @InterestEvent(PKMainEvent.clickMenu)
+        public clickMenu(): void {
+            SoundManager.getInstance().PlaySound(SoundManager.mClickAudioUrl);
+            // this._view.grp_mood.removeChildren();
+            // this._view.map.removeChildren();
+            // $facade.addModule(ModuleID.menu);
+        }
 
         private gameStart() {
-            this._view.gameover();
+            // this._view.gameover();
             let mapData = $userData.gamePortVO;
-            this._view.updateData(mapData);
+            // this._view.updateData(mapData);
             //启用开始协议
         }
-		//修改游戏场景地图数据，并检测是否完成
+        //修改游戏场景地图数据，并检测是否完成
         @InterestEvent(PKMainEvent.addMood)
         private addMood(e: egret.Event) {
             //实时
@@ -39,7 +39,7 @@ namespace game {
         }
         //游戏结束
         @InterestEvent(PKMainEvent.endpkgame)
-        public endpkgame(){
+        public endpkgame() {
             //启动结束协议
             this.model.reqEndGame();
             //$facade.addModule(ModuleID.pkwin);
@@ -158,51 +158,50 @@ namespace game {
             }
             return true;
         }
-		@InterestEvent(PKMainEvent.clickRefresh)
-		public clickRefresh(): void {
-			//                                                                                                                                                                                                                                   清除木块和地图
-			// this._view.gameover();
-			// //刷线本关卡地图数据
-			// let port = $userData.portPKList.getPort($userData.gamePortVO.playProId);
-			// // this.useKey = 0;
-			// let mapData = $userData.gamePortVO;
-			// $userData.gamePortVO.GameMapVO.update(mapData.curPort.mapVO);
-			// this._view.updateData(mapData);
-			// console.log("点击刷新");
+        @InterestEvent(PKMainEvent.clickRefresh)
+        public clickRefresh(): void {
+            //                                                                                                                                                                                                                                   清除木块和地图
+            // this._view.gameover();
+            // //刷线本关卡地图数据
+            // let port = $userData.portPKList.getPort($userData.gamePortVO.playProId);
+            // // this.useKey = 0;
+            // let mapData = $userData.gamePortVO;
+            // $userData.gamePortVO.GameMapVO.update(mapData.curPort.mapVO);
+            // this._view.updateData(mapData);
+            // console.log("点击刷新");
 
-            let playPortId = this._GamerInfo.RandomNumBoth(0,50);
-			let port = $userData.portPKList.getPort(playPortId);
+            let playPortId = this._GamerInfo.RandomNumBoth(0, 50);
+            let port = $userData.portPKList.getPort(playPortId);
             let gamePortVO = $userData.gamePortVO = new GamePortVO();
             gamePortVO.update(port);
-			let mapData = $userData.gamePortVO;
-			this._view.updateData(mapData);
-		}
-		/**监听 钥匙 */
-		@InterestEvent(PKMainEvent.clickKey)
-		private clickKey(): void {
-			SoundManager.getInstance().PlaySound(SoundManager.mClickAudioUrl);
-			console.log("点击提示");
-		}
-        
+            let mapData = $userData.gamePortVO;
+            // this._view.updateData(mapData);
+        }
+        /**监听 钥匙 */
+        @InterestEvent(PKMainEvent.clickKey)
+        private clickKey(): void {
+            SoundManager.getInstance().PlaySound(SoundManager.mClickAudioUrl);
+            console.log("点击提示");
+        }
+
         /** 修改倒计时 */
         @InterestNotify(NotifyConst.updatePKTime)
-        private updatePKTime():void{
+        private updatePKTime(): void {
             let time = $userData.pkRoomVO.timeTick;
-            let timeStr:string = time.toString();
+            let timeStr: string = time.toString();
             this._view.timebar.text = timeStr;
-            if(time <= 10){
+            if (time <= 10) {
                 this._view.timePrompt();
             }
         }
 
-         /** 使用减时道具 */
+        /** 使用减时道具 */
         @InterestNotify(NotifyConst.useMinusTimeTool)
-        
-        private useMinusTimeTool():void{
+
+        private useMinusTimeTool(): void {
             //   SoundManager.getInstance().PlaySound(SoundManager.mShorterAudioUrl);
-            if(this._view.reduceTime_Num.text === '0')
-            {
-                $facade.addModule(ModuleID.msg,undefined,'道具不足');
+            if (this._view.reduceTime_Num.text === '0') {
+                $facade.addModule(ModuleID.msg, undefined, '道具不足');
                 return;
             }
             let opponentID = $userData.pkRoomVO.opponentID;
@@ -211,50 +210,49 @@ namespace game {
         }
 
         @InterestNotify(NotifyConst.updateGameSituation)
-        private updateGameSituation():void{
+        private updateGameSituation(): void {
             let msg = this.model.Msg;
             this._view.gamerSituation_label.text = msg;
             let sID = this.model.sDID;
-            this._view.updateGamerPercent(sID,false,'animation');
+            this._view.updateGamerPercent(sID, false, 'animation');
         }
 
-		@InterestEvent(PKMainEvent.clickAddTimeTool)
-		private clickAddTimeTool(): void {
+        @InterestEvent(PKMainEvent.clickAddTimeTool)
+        private clickAddTimeTool(): void {
             // this._view.showToolEffect();
             // let gamers = $userData.pkRoomVO.gamerList;
             // this._view.updateGamerPercent(gamers[1].sID,false,'animation');
             // SoundManager.getInstance().PlaySound(SoundManager.mLongerAudioUrl);
-            if(this._view.addTime_Num.text === '0')
-            {
-                $facade.addModule(ModuleID.msg,undefined,'道具不足');
+            if (this._view.addTime_Num.text === '0') {
+                $facade.addModule(ModuleID.msg, undefined, '道具不足');
                 return;
             }
             $userData.pkRoomVO.opponentID = $userData.account.userid.toString();
             this.model.reqUseTool(0);
             $userData.pkRoomVO.toolID = 0;
-		}
+        }
 
         @InterestNotify(NotifyConst.toolUpdate)
-        private toolUpdate():void{
+        private toolUpdate(): void {
             this._view.updateToolNum();
         }
-        public changeMoodPosition(flage:boolean){
-            if(flage){
+        public changeMoodPosition(flage: boolean) {
+            if (flage) {
                 console.log('添加木块');
                 // let sID = $userData.pkRoomVO.gamerList[1].sID;
                 // this._view.updateGamerPercent(sID,true);
                 this.model.reqPlayBlockAdd();
-            }else{
+            } else {
                 console.log('减少木块');
                 this.model.reqPlayBlockDelete();
             }
-            
+
         }
         @InterestNotify(NotifyConst.moveMoodPosition)
-        private moveMoodPosition(){
+        private moveMoodPosition() {
             let sID = this.model.sID;
             let flage = this.model.playBlockIsAdd;
-            this._view.updateGamerPercent(sID,flage,'percent');
+            this._view.updateGamerPercent(sID, flage, 'percent');
         }
-	}
+    }
 }

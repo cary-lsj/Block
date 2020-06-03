@@ -4,7 +4,7 @@ namespace game {
      */
     export class PortMediator extends MediatorBase<PortFullWindow>{
         @InjectProxy(ProxyID.port)
-        public model:PortProxy;
+        public model: PortProxy;
 
         public onRegister(): void {
             super.onRegister();
@@ -31,11 +31,11 @@ namespace game {
             $facade.addModule(ModuleID.menu);
         }
 
-        public gmStart(id:number):void{
+        public gmStart(id: number): void {
             let port = $userData.portList.getPort(id);
             let gamePortVO = $userData.gamePortVO = new GamePortVO();
             gamePortVO.update(port);
-            gamePortVO.playProId=id;
+            gamePortVO.playProId = id;
             $facade.addModule(ModuleID.main);
         }
 
@@ -43,7 +43,6 @@ namespace game {
         private updatePortSart(e: egret.Event): void {
             $facade.addModule(ModuleID.main);
         }
-        
-        
+
     }
 }

@@ -8,7 +8,9 @@ declare interface Platform {
 
     getUserInfo(): Promise<any>;
 
-    login(): Promise<any>
+    login(): Promise<any>;
+
+    share(): void;
 
 }
 
@@ -17,6 +19,9 @@ class DebugPlatform implements Platform {
         return undefined;
     }
     async login() {
+
+    }
+    share() {
 
     }
 }

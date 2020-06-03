@@ -9,9 +9,9 @@ namespace game {
         private startY: number;
         private _isDown: boolean = false;
 
-        public type:string;
+        public type: string;
         public index: number;
-        
+
         public constructor() {
             super();
         }
@@ -23,9 +23,9 @@ namespace game {
             this.on(egret.TouchEvent.TOUCH_TAP, this.onTouchTapHadler, this);
         }
         //木块初始化
-        public initmapMood(x:number,y:number){
-            this.startX=x;
-            this.startY=y;
+        public initmapMood(x: number, y: number) {
+            this.startX = x;
+            this.startY = y;
             this.scaleX = 0.6;
             this.scaleY = 0.6;
         }
@@ -73,17 +73,16 @@ namespace game {
         }
         //木块返回原位
         public restart(): void {
-            egret.Tween.get(this).to({ x: this.startX, y: this.startY, scaleX: 0.6, scaleY: 0.6 }, 500, egret.Ease.backInOut).call(this.rechindex,this);
+            egret.Tween.get(this).to({ x: this.startX, y: this.startY, scaleX: 0.6, scaleY: 0.6 }, 500, egret.Ease.backInOut).call(this.rechindex, this);
             let vo = this.data as MapVO;
-            this.dispatch(MainEvent.initPos,true,vo);
-         
+            this.dispatch(MainEvent.initPos, true, vo);
+
         }
-        public rechindex():void{
-            if(this.index==null)
-            {
+        public rechindex(): void {
+            if (this.index == null) {
                 return;
             }
-            this.dispatch(MainEvent.rechildindex,true);
+            this.dispatch(MainEvent.rechildindex, true);
         }
         //修改场景地图数据，检查是否完成对局
         public modifymapdata(vo: MapVO): void {

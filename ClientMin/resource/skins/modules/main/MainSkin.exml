@@ -2,7 +2,7 @@
 <e:Skin class="gameSkin.MainSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*"
         xmlns:w="http://ns.egret.com/wing">
 	<e:Image source="ocean2_json.资源 26@3x" x="182" y="590"/>
-	<e:Image y="694" anchorOffsetY="0" height="220" anchorOffsetX="0" width="635"  source="common_json.woods_bg" scale9Grid="10,10,10,10" horizontalCenter="-0.5"/>
+	<e:Image anchorOffsetY="0" height="220" anchorOffsetX="0" width="635"  source="common_json.woods_bg" scale9Grid="10,10,10,10" horizontalCenter="-0.5" y="694"/>
 	<game:MapMainItem id="map" y="290"  x="320"/>
 	
 	<e:Group id="grp_mood" width="640" height="1136">
@@ -18,18 +18,19 @@
 	<e:Image id="img_starbg" source="common_json.starnum_bg" x="367" y="76" width="212" height="85"/>
 	<e:BitmapLabel id="starnum" width="96" height="31" x="455" font="porStarNum_fnt" text="100" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" y="104"/>
 	<e:Rect id="map_rect" strokeAlpha="1" fillAlpha="0" anchorOffsetX="0" width="636" anchorOffsetY="0" height="486" x="2" y="168.5"/>
-	<game:ScaleButton id="btn_key" label="" x="209" y="975" height="98" width="223" visible="false">
+	<game:ScaleButton id="btn_key" label="" x="209" height="98" width="223" bottom="63">
 		<game:skinName>
 		<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="common_json.key_bg"/>
 	<e:Group id="group" width="223" height="98" x="0" y="0">
 		<e:Image source="common_json.key" x="43.5" y="18.5" scaleX="1" scaleY="1"/>
+		<e:Label text="提 示" fontFamily="SimHei" size="28" style="labelStroke" textAlign="center" verticalAlign="middle" backgroundColor="0x000000" borderColor="0x000000" strokeColor="0xA57521" stroke="3" y="35" x="103"/>
 	</e:Group>
 		</e:Skin>
 		</game:skinName>
 	</game:ScaleButton>
-	<e:BitmapLabel id="keynum" width="96" height="44" x="100" text="100" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" font="keyNum_fnt" verticalCenter="0"/>
-	<game:ScaleButton id="btn_refresh" label="" x="495" width="86" height="90" y="979">
+
+	<game:ScaleButton id="btn_refresh" label="" x="495" width="86" height="90" bottom="67">
 		<game:skinName>
 		<e:Skin states="up,down,disabled" xmlns:tween="egret.tween.*">
 			<e:Image width="100%" height="100%" source="common_json.button-bg" x="0" y="0"/>
@@ -39,5 +40,6 @@
 		</e:Skin>
 		</game:skinName>
 	</game:ScaleButton>
-	<game:SetView id="btn_setup" x="62" y="830" width="86"/>
+	<game:SetView id="btn_setup" x="62" width="86" bottom="68"/>
+	<e:BitmapLabel id="keynum" width="96" height="44" x="297" text="100" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" font="keyNum_fnt" y="999" visible="false"/>
 </e:Skin>
