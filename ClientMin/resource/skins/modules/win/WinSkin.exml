@@ -174,7 +174,7 @@
 			</e:Skin>
 			</game:skinName>
 		</game:ScaleButton>
-		<e:Image id="image3" source="common_json.key" x="200" scaleX="1" scaleY="1" width="49" height="55" verticalCenter="0" visible="false"/>
+		<e:Image id="image3" source="common_json.key" x="200" scaleX="1" scaleY="1" width="49" height="55" verticalCenter="0"/>
 	</e:Group>
 	
     

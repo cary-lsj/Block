@@ -4,7 +4,7 @@ namespace game {
 
     /**
      * 游戏容器
-     * @author wizardc
+     * @author cary
      */
     export class GameView extends eui.UILayer implements IModuleContainer {
         /** 场景层 */

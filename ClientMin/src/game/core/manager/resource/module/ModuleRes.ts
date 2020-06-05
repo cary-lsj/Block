@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 模块资源
-     * @author wizardc
+     * @author cary
      */
     export class ModuleRes {
         private _moduleID: ModuleID;
@@ -43,14 +43,14 @@ namespace game {
             return this._resPolicy;
         }
 
-        public init<T extends egret.DisplayObject & IModuleView>(moduleID: ModuleID, viewClass: {new(): T}, liveTime?: number): void {
+        public init<T extends egret.DisplayObject & IModuleView>(moduleID: ModuleID, viewClass: { new(): T }, liveTime?: number): void {
             this._moduleID = moduleID;
             this._view = new viewClass();
-            let resList: string[] = (<any> this._view.constructor).__releaseResList;
+            let resList: string[] = (<any>this._view.constructor).__releaseResList;
             if (resList && resList.length > 0) {
                 this._resNames = resList.concat();
             }
-            this._resPolicy = (<any> this._view.constructor).__resPolicy || ModuleResPolicy.never;
+            this._resPolicy = (<any>this._view.constructor).__resPolicy || ModuleResPolicy.never;
             if (this._resPolicy == ModuleResPolicy.smart) {
                 this._liveTime = liveTime;
             }

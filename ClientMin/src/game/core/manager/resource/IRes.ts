@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 资源接口
-     * @author wizardc
+     * @author cary
      */
     export interface IRes extends IDestroy {
         readonly url: string;

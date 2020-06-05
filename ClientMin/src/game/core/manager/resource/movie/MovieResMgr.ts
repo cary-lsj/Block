@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 序列帧动画管理
-     * @author wizardc
+     * @author cary
      */
     export class MovieResMgr extends ResMgrBase<MovieRes> {
         private _defaultLiveTime: number = 10000;

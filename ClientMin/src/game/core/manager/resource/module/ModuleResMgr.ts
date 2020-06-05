@@ -1,11 +1,11 @@
 namespace game {
     /**
      * 模块资源管理
-     * @author wizardc
+     * @author cary
      */
     export class ModuleResMgr {
         private _checkTime: number = 10000;
-        private _resMap: {[k: number]: ModuleRes};
+        private _resMap: { [k: number]: ModuleRes };
         private _smartLiveTime: number = 60000;
 
         public constructor() {
@@ -19,19 +19,19 @@ namespace game {
             return this._checkTime;
         }
 
-        public getRes<T extends egret.DisplayObject & IModuleView>(moduleID: ModuleID, viewClass: {new(): T}): T {
+        public getRes<T extends egret.DisplayObject & IModuleView>(moduleID: ModuleID, viewClass: { new(): T }): T {
             if (this._resMap[moduleID]) {
                 let res = this._resMap[moduleID];
                 if (res.resPolicy == ModuleResPolicy.never || (res.resPolicy == ModuleResPolicy.smart && res.view)) {
                     res.using = true;
-                    return <T> res.view;
+                    return <T>res.view;
                 }
             }
             let res = new ModuleRes();
             res.using = true;
             res.init(moduleID, viewClass, this._smartLiveTime);
             this._resMap[moduleID] = res;
-            return <T> res.view;
+            return <T>res.view;
         }
 
         public putRes(moduleID: ModuleID): void {

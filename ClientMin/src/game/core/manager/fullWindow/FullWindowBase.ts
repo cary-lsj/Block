@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 全屏窗口基类
-     * @author wizardc
+     * @author cary
      */
     export abstract class FullWindowBase<T extends eui.Component> extends eui.Component implements IModuleView {
         public content: eui.Group;

@@ -2,14 +2,14 @@
     /**
      * 提供泛型哈希表的支持
      * 如果 key 使用继承 egret.HashObject 的对象, 则使用 hashCode 作为其键值, 否则使用 toString() 的返回作为键值
-     * @author wizardc
+     * @author cary
      */
     export class Dictionary<TKey, TValue> {
-        private _map: {[k: string]: TValue};
-        private _keyMap: {[k: string]: TKey};
+        private _map: { [k: string]: TValue };
+        private _keyMap: { [k: string]: TKey };
         private _size: number;
 
-        public constructor(map?: {[k: string]: TValue}) {
+        public constructor(map?: { [k: string]: TValue }) {
             this._map = map || {};
             this._keyMap = {};
             this._size = 0;
@@ -80,11 +80,11 @@
             return "{" + result.join(", ") + "}";
         }
 
-        public keyOf(): {[k: string]: TKey} {
+        public keyOf(): { [k: string]: TKey } {
             return this._keyMap;
         }
 
-        public valueOf(): {[k: string]: TValue} {
+        public valueOf(): { [k: string]: TValue } {
             return this._map;
         }
     }

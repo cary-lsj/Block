@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 加载优先级
-     * @author wizardc
+     * @author cary
      */
     export const enum LoadPriority {
         /** 未知类型 */

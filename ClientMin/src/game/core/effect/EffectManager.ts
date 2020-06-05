@@ -1,6 +1,6 @@
 /**
  * 特效管理器
- * @author wizardc
+ * @author cary
  */
 namespace game.EffectManager {
     /**

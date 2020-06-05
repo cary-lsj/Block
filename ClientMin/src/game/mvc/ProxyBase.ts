@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 代理基类, 抽一层出来处理非 MVC 功能的逻辑
-     * @author wizardc
+     * @author cary
      */
     export abstract class ProxyBase extends AbstractProxy {
         protected __interestMessageList: { [key: string]: Function[] };
@@ -43,7 +43,7 @@ namespace game {
             if (!target.__interestMessageList) {
                 target.__interestMessageList = {};
             }
-            let map: {[key: string]: Function[]} = target.__interestMessageList;
+            let map: { [key: string]: Function[] } = target.__interestMessageList;
             if (!map[messageID]) {
                 map[messageID] = [];
             }

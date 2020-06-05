@@ -17,6 +17,11 @@
 			"name": "click_test_mp3"
 		},
 		{
+			"url": "sound/win.mp3",
+			"type": "sound",
+			"name": "win_mp3"
+		},
+		{
 			"url": "skins/common/ButtonSkin.exml",
 			"type": "bin",
 			"name": "ButtonSkin_exml"
@@ -25,16 +30,6 @@
 			"url": "skins/common/SquareSkin.exml",
 			"type": "bin",
 			"name": "SquareSkin_exml"
-		},
-		{
-			"url": "assets/font/CountDown/CountDown.fnt",
-			"type": "font",
-			"name": "CountDown_fnt"
-		},
-		{
-			"url": "assets/font/CountDown/CountDown.png",
-			"type": "image",
-			"name": "CountDown_png"
 		},
 		{
 			"url": "assets/font/WaitNum/WaitNum.fnt",
@@ -47,24 +42,14 @@
 			"name": "WaitNum_png"
 		},
 		{
-			"url": "assets/font/porNum/porNum.fnt",
+			"url": "assets/font/CountDown/CountDown.fnt",
 			"type": "font",
-			"name": "porNum_fnt"
+			"name": "CountDown_fnt"
 		},
 		{
-			"url": "assets/font/porNum/porNum.png",
+			"url": "assets/font/CountDown/CountDown.png",
 			"type": "image",
-			"name": "porNum_png"
-		},
-		{
-			"url": "assets/font/rankNum/rank.fnt",
-			"type": "font",
-			"name": "rank_fnt"
-		},
-		{
-			"url": "assets/font/rankNum/rank.png",
-			"type": "image",
-			"name": "rank_png"
+			"name": "CountDown_png"
 		},
 		{
 			"url": "assets/font/keyNum/keyNum.fnt",
@@ -85,6 +70,26 @@
 			"url": "assets/font/porStarNum/porStarNum.png",
 			"type": "image",
 			"name": "porStarNum_png"
+		},
+		{
+			"url": "assets/font/porNum/porNum.fnt",
+			"type": "font",
+			"name": "porNum_fnt"
+		},
+		{
+			"url": "assets/font/porNum/porNum.png",
+			"type": "image",
+			"name": "porNum_png"
+		},
+		{
+			"url": "assets/font/rankNum/rank.fnt",
+			"type": "font",
+			"name": "rank_fnt"
+		},
+		{
+			"url": "assets/font/rankNum/rank.png",
+			"type": "image",
+			"name": "rank_png"
 		},
 		{
 			"url": "assets/font/rankStarNum/rankStar.fnt",
@@ -117,11 +122,6 @@
 			"name": "shopMoneyNum_png"
 		},
 		{
-			"url": "assets/ui/common/img_bg.png",
-			"type": "image",
-			"name": "img_bg_png"
-		},
-		{
 			"url": "assets/font/shopZsNum/shopZsNum.fnt",
 			"type": "font",
 			"name": "shopZsNum_fnt"
@@ -132,19 +132,29 @@
 			"name": "shopZsNum_png"
 		},
 		{
+			"url": "assets/ui/common/bg_frame.png",
+			"type": "image",
+			"name": "bg_frame_png"
+		},
+		{
+			"url": "assets/ui/common/img_bg.png",
+			"type": "image",
+			"name": "img_bg_png"
+		},
+		{
 			"url": "skins/modules/Ad/AdSkin.exml",
 			"type": "bin",
 			"name": "AdSkin_exml"
 		},
 		{
+			"url": "skins/modules/humor/HumorSkin.exml",
+			"type": "bin",
+			"name": "HumorSkin_exml"
+		},
+		{
 			"url": "skins/modules/login/LoginSkin.exml",
 			"type": "bin",
 			"name": "LoginSkin_exml"
-		},
-		{
-			"url": "skins/modules/msg/msgSkin.exml",
-			"type": "bin",
-			"name": "msgSkin_exml"
 		},
 		{
 			"url": "skins/modules/main/BorderSkin.exml",
@@ -162,9 +172,14 @@
 			"name": "MapSkin_exml"
 		},
 		{
-			"url": "skins/modules/humor/HumorSkin.exml",
+			"url": "skins/modules/menu/MenuSkin.exml",
 			"type": "bin",
-			"name": "HumorSkin_exml"
+			"name": "MenuSkin_exml"
+		},
+		{
+			"url": "skins/modules/msg/msgSkin.exml",
+			"type": "bin",
+			"name": "msgSkin_exml"
 		},
 		{
 			"url": "skins/modules/pklose/PkLoseSkin.exml",
@@ -172,14 +187,9 @@
 			"name": "PkLoseSkin_exml"
 		},
 		{
-			"url": "skins/modules/menu/MenuSkin.exml",
+			"url": "skins/modules/pkwin/PKWinSkin.exml",
 			"type": "bin",
-			"name": "MenuSkin_exml"
-		},
-		{
-			"url": "skins/modules/port/PortSkin.exml",
-			"type": "bin",
-			"name": "PortSkin_exml"
+			"name": "PKWinSkin_exml"
 		},
 		{
 			"url": "skins/modules/pkmain/PKMainSkin.exml",
@@ -187,34 +197,9 @@
 			"name": "PKMainSkin_exml"
 		},
 		{
-			"url": "skins/modules/room/RoomSkin.exml",
+			"url": "skins/modules/port/PortSkin.exml",
 			"type": "bin",
-			"name": "RoomSkin_exml"
-		},
-		{
-			"url": "skins/modules/pkwin/PKWinSkin.exml",
-			"type": "bin",
-			"name": "PKWinSkin_exml"
-		},
-		{
-			"url": "skins/modules/scene/SceneSkin.exml",
-			"type": "bin",
-			"name": "SceneSkin_exml"
-		},
-		{
-			"url": "skins/modules/set/SetSkin.exml",
-			"type": "bin",
-			"name": "SetSkin_exml"
-		},
-		{
-			"url": "skins/modules/test/DemoTest.exml",
-			"type": "bin",
-			"name": "DemoTest_exml"
-		},
-		{
-			"url": "skins/modules/test/TestSkin.exml",
-			"type": "bin",
-			"name": "TestSkin_exml"
+			"name": "PortSkin_exml"
 		},
 		{
 			"url": "skins/modules/rank/RankItemSkin.exml",
@@ -227,9 +212,39 @@
 			"name": "RankSkin_exml"
 		},
 		{
+			"url": "skins/modules/scene/SceneSkin.exml",
+			"type": "bin",
+			"name": "SceneSkin_exml"
+		},
+		{
+			"url": "skins/modules/room/RoomSkin.exml",
+			"type": "bin",
+			"name": "RoomSkin_exml"
+		},
+		{
+			"url": "skins/modules/set/SetSkin.exml",
+			"type": "bin",
+			"name": "SetSkin_exml"
+		},
+		{
+			"url": "skins/modules/shop/ShopSkin.exml",
+			"type": "bin",
+			"name": "ShopSkin_exml"
+		},
+		{
 			"url": "skins/modules/tool/ToolSkin.exml",
 			"type": "bin",
 			"name": "ToolSkin_exml"
+		},
+		{
+			"url": "skins/modules/test/DemoTest.exml",
+			"type": "bin",
+			"name": "DemoTest_exml"
+		},
+		{
+			"url": "skins/modules/test/TestSkin.exml",
+			"type": "bin",
+			"name": "TestSkin_exml"
 		},
 		{
 			"url": "skins/modules/win/WinSkin.exml",
@@ -237,9 +252,9 @@
 			"name": "WinSkin_exml"
 		},
 		{
-			"url": "skins/modules/shop/ShopSkin.exml",
+			"url": "skins/modules/pkwin/item/PKRankItemSkin.exml",
 			"type": "bin",
-			"name": "ShopSkin_exml"
+			"name": "PKRankItemSkin_exml"
 		},
 		{
 			"url": "skins/modules/pkmain/item/GamerInfo.exml",
@@ -257,21 +272,6 @@
 			"name": "StarsItemSkin_exml"
 		},
 		{
-			"url": "skins/modules/pkwin/item/PKRankItemSkin.exml",
-			"type": "bin",
-			"name": "PKRankItemSkin_exml"
-		},
-		{
-			"url": "skins/modules/test/item/TestItemSKin.exml",
-			"type": "bin",
-			"name": "TestItemSKin_exml"
-		},
-		{
-			"url": "skins/modules/tool/item/GamerHeadSkin.exml",
-			"type": "bin",
-			"name": "GamerHeadSkin_exml"
-		},
-		{
 			"url": "skins/modules/shop/item/DiamondItemSkin.exml",
 			"type": "bin",
 			"name": "DiamondItemSkin_exml"
@@ -282,26 +282,14 @@
 			"name": "ShopItemSkin_exml"
 		},
 		{
-			"url": "config/description.json",
-			"type": "json",
-			"name": "description_json"
+			"url": "skins/modules/tool/item/GamerHeadSkin.exml",
+			"type": "bin",
+			"name": "GamerHeadSkin_exml"
 		},
 		{
-			"url": "config/mapinfo.json",
-			"type": "json",
-			"name": "mapinfo_json"
-		},
-		{
-			"url": "assets/ui/ocean2.json",
-			"type": "sheet",
-			"name": "ocean2_json",
-			"subkeys": "资源 10@3x,资源 11@3x,资源 12@3x,资源 13@3x,资源 14@3x,资源 15@3x,资源 16@3x,资源 17@3x,资源 18@3x,资源 19@3x,资源 1@3x,资源 20@3x,资源 21@3x,资源 22@3x,资源 23@3x,资源 24@3x,资源 25@3x,资源 26@3x,资源 27@3x,资源 28@3x,资源 29@3x,资源 2@3x,资源 30@3x,资源 31@3x,资源 32@3x,资源 33@3x,资源 3@3x,资源 4@3x,资源 5@3x,资源 6@3x,资源 7@3x,资源 8@3x,资源 9@3x"
-		},
-		{
-			"url": "assets/ui/common.json",
-			"type": "sheet",
-			"name": "common_json",
-			"subkeys": "Close,Leaderboard icon,add_time_png,adtext,btn_again,btn_next,btn_rank,button-bg,buy_bj,buy_sale,checked,checked_bj,contacttext,contactus,create_room_png,cut_off_line,default_head_png,diamond_png,dissolution_room_png,do_not_click,first_buy_bj,gamestart,golg_png,gray-btn,grounding_blue_png,group_time,headImg_bg_png,headImg_bg_wait_png,key,key_bg,lookad,map_bg,map_stro_horn,map_stro_line,map_stro_min,mapno_bg,match_room_png,minus_time_png,money,mood-bg,music_on,offplay,por_num_bg,pornotstar,porstar,portext,prepare_png,preser,preser_bg,prop_bj,rank_word,rankstar,return_port-btn,scroll_line,scroll_slider,selected-btn,set-btn,set_bg,shop_Num_10,shop_Num_120,shop_bj,singin,sound_on,star,star_bg,star_game_g_png,star_game_png,starnum_bg,text-bg,time_bg_png,timebar,timebar_bg,total,unprepared_png,unselected-btn,win_cut_off_line,wintext,wood_1,wood_2,wood_3,wood_4,wood_5,wood_6,woods_bg,zs_bj,zs_money_big5,zs_sale"
+			"url": "skins/modules/test/item/TestItemSKin.exml",
+			"type": "bin",
+			"name": "TestItemSKin_exml"
 		},
 		{
 			"url": "default.thm.json",
@@ -314,19 +302,31 @@
 			"name": "default.res_json"
 		},
 		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
 			"url": "gameEui.json",
 			"type": "json",
 			"name": "gameEui_json"
 		},
 		{
-			"url": "sound/win.mp3",
-			"type": "sound",
-			"name": "win_mp3"
+			"url": "config/mapinfo.json",
+			"type": "json",
+			"name": "mapinfo_json"
 		},
 		{
-			"url": "assets/ui/common/bg_frame.png",
-			"type": "image",
-			"name": "bg_frame_png"
+			"url": "assets/ui/common.json",
+			"type": "sheet",
+			"name": "common_json",
+			"subkeys": "Close,Leaderboard icon,add_time_png,adtext,btn_again,btn_next,btn_rank,button-bg,buy_bj,buy_sale,checked,checked_bj,contacttext,contactus,create_room_png,cut_off_line,default_head_png,diamond_png,dissolution_room_png,do_not_click,first_buy_bj,gamestart,golg_png,gray-btn,grounding_blue_png,group_time,headImg_bg_png,headImg_bg_wait_png,key,key_bg,lookad,map_bg,map_stro_horn,map_stro_line,map_stro_min,mapno_bg,match_room_png,minus_time_png,money,mood-bg,music_on,offplay,por_num_bg,pornotstar,porstar,portext,prepare_png,preser,preser_bg,prop_bj,rank_word,rankstar,return_port-btn,scroll_line,scroll_slider,selected-btn,set-btn,set_bg,shop_Num_10,shop_Num_120,shop_bj,singin,sound_on,star,star_bg,star_game_g_png,star_game_png,starnum_bg,text-bg,time_bg_png,timebar,timebar_bg,total,unprepared_png,unselected-btn,win_cut_off_line,wintext,wood_1,wood_2,wood_3,wood_4,wood_5,wood_6,woods_bg,zs_bj,zs_money_big5,zs_sale"
+		},
+		{
+			"url": "assets/ui/ocean2.json",
+			"type": "sheet",
+			"name": "ocean2_json",
+			"subkeys": "资源 10@3x,资源 11@3x,资源 12@3x,资源 13@3x,资源 14@3x,资源 15@3x,资源 16@3x,资源 17@3x,资源 18@3x,资源 19@3x,资源 1@3x,资源 20@3x,资源 21@3x,资源 22@3x,资源 23@3x,资源 24@3x,资源 25@3x,资源 26@3x,资源 27@3x,资源 28@3x,资源 29@3x,资源 2@3x,资源 30@3x,资源 31@3x,资源 32@3x,资源 33@3x,资源 3@3x,资源 4@3x,资源 5@3x,资源 6@3x,资源 7@3x,资源 8@3x,资源 9@3x"
 		}
 	]
 }

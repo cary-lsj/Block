@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 带有优先级的资源管理类
-     * @author wizardc
+     * @author cary
      */
     export namespace RESP {
         export function setMaxLoadingThread(thread: number): void {
@@ -42,7 +42,7 @@ namespace game {
             private _nowLoadingThread: number = 0;
 
             private _priorityList: number[];
-            private _priorityMap: {[priority: number]: ResourceItem[]};
+            private _priorityMap: { [priority: number]: ResourceItem[] };
 
             public constructor() {
                 this._priorityList = [];
@@ -60,7 +60,7 @@ namespace game {
                     this._priorityMap[priority] = [];
                 }
                 let list = this._priorityMap[priority];
-                list.push({inConfig: true, key, compFunc, thisObject});
+                list.push({ inConfig: true, key, compFunc, thisObject });
                 this.loadNext();
             }
 
@@ -79,7 +79,7 @@ namespace game {
                     this._priorityMap[priority] = [];
                 }
                 let list = this._priorityMap[priority];
-                list.push({inConfig: false, url, compFunc, thisObject, type});
+                list.push({ inConfig: false, url, compFunc, thisObject, type });
                 this.loadNext();
             }
 

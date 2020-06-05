@@ -3,7 +3,6 @@ namespace game {
      * 排行榜代理
      */
     export class RankProxy extends ProxyBase {
-        private _timeoutID: number;
         private _dataArr: any[];
 
         public constructor() {
@@ -11,7 +10,7 @@ namespace game {
         }
 
         public reqRank(): void {
-            this._senderHttp.send_Rank()
+            // this._senderHttp.send_Rank()
         }
 
         /** 监听 返回请求 */

@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 粒子资源管理
-     * @author wizardc
+     * @author cary
      */
     export class ParticleResMgr extends ResMgrBase<ParticleRes> {
         private _defaultLiveTime: number = 10000;

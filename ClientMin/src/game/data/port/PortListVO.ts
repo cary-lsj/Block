@@ -1,12 +1,13 @@
 namespace game {
     /**
      * 关卡列表数据
-     * @author wizardc
+     * @author cary
      */
     export class PortListVO {
         public portList: PortVO[];
         public starNum: string;//玩家获得星星总数
         public keyNum: string;//玩家提示总数
+        public port: number;
 
         public updateList(data: any[]): void {
             for (let i = 0; i < data.length; i++) {
@@ -106,6 +107,8 @@ namespace game {
                 }
             }
             this.starNum = (port * 3) + "";
+            this.port = port;
+            KTVDataUtil.updateData();
         }
     }
 }

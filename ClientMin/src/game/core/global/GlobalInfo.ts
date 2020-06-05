@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 全局数据
-     * @author wizardc
+     * @author cary
      */
     export class GlobalInfo {
         private static _account: string;
@@ -15,12 +15,14 @@ namespace game {
         }
 
         public static initUserinfo(info) {
-            js_userInfo = info;
+            if (info) {
+                js_userInfo = info;
+            }
         }
 
         public static initAccount(data: string): void {
-            let userdata: AccountVO = $userData.account = new AccountVO();
-            userdata.userid = this._account = data;
+            let userdata: AccountVO = $userData.account;
+            userdata.username = this._account = data;
         }
 
     }

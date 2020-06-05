@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 当前游戏 地图数据
-     * @author wizardc
+     * @author cary
      */
     export class GameMapVO {
         /** 地图 逻辑数据 */

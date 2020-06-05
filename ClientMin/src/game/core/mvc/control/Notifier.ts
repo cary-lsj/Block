@@ -1,13 +1,13 @@
 namespace game {
     /**
      * 简单的消息发送对象
-     * @author wizardc
+     * @author cary
      */
     export class Notifier implements INotifier {
-        protected __injectProxyMap: {[key: string]: string[]};
+        protected __injectProxyMap: { [key: string]: string[] };
 
         public constructor() {
-            let injectProxyMap: {[key: string]: string[]} = this.__injectProxyMap;
+            let injectProxyMap: { [key: string]: string[] } = this.__injectProxyMap;
             for (let proxyName in injectProxyMap) {
                 let propertyKeys = injectProxyMap[proxyName];
                 for (let i = 0, len = propertyKeys.length; i < len; i++) {

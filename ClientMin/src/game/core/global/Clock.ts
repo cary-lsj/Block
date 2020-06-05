@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 游戏时钟
-     * @author wizardc
+     * @author cary
      */
     export class Clock {
         private static _instance: Clock;

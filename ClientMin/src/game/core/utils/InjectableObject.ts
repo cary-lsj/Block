@@ -1,10 +1,10 @@
 namespace game {
     /**
      * 可注入类
-     * @author wizardc
+     * @author cary
      */
     export abstract class InjectableObject extends Notifier {
-        private __interestNotifyList: {[key: string]: Function[]};
+        private __interestNotifyList: { [key: string]: Function[] };
 
         protected _facade: Facade = Facade.instance;
 

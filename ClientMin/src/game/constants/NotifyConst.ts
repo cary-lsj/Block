@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 消息
-     * @author wizardc
+     * @author cary
      */
     export const enum NotifyConst {
 
@@ -77,5 +77,8 @@ namespace game {
         updateUserProperty,
         /** 修改木块位置 */
         moveMoodPosition,
+
+        /** 开放数据更新 */
+        updateKTVdata,
     }
 }

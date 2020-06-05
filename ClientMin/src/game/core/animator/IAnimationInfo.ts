@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 动画信息
-     * @author wizardc
+     * @author cary
      */
     export interface IAnimationInfo {
         readonly file: string;
@@ -11,6 +11,6 @@ namespace game {
         readonly len: number;
         readonly dir: number;
         readonly speed: number;
-        readonly subs: {x: number, y: number, ofx: number, ofy: number, width: number, height: number}[];
+        readonly subs: { x: number, y: number, ofx: number, ofy: number, width: number, height: number }[];
     }
 }

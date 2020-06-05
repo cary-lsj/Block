@@ -1,6 +1,6 @@
 /**
  * 配置管理器
- * @author wizardc
+ * @author cary
  */
 namespace game.ConfigManager {
     export function init(data: any): void {
@@ -18,7 +18,7 @@ namespace game.ConfigManager {
             this._moodData = {};
             this._mapData = {};
         }
-         public getMoodInfo(name: string): any {
+        public getMoodInfo(name: string): any {
             return this._moodData[name];
         }
 

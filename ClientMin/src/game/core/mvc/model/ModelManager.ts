@@ -1,7 +1,7 @@
 ﻿namespace game {
     /**
      * 管理程序中使用到的所有代理对象
-     * @author wizardc
+     * @author cary
      */
     export class ModelManager {
         private static _instance: ModelManager;
@@ -10,7 +10,7 @@
             return ModelManager._instance || (ModelManager._instance = new ModelManager());
         }
 
-        private _proxyMap: {[k: string]: IProxy};
+        private _proxyMap: { [k: string]: IProxy };
 
         private constructor() {
             this._proxyMap = {};

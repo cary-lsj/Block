@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 资源管理器
-     * @author wizardc
+     * @author cary
      */
     export class ResourceManager implements IClockClient {
         private static _instance: ResourceManager;

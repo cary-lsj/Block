@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 对象销毁接口
-     * @author wizardc
+     * @author cary
      */
     export interface IDispose {
         dispose(): void;

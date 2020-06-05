@@ -8,7 +8,7 @@ namespace game {
     /** 用户数据 */
     export var $userData: UserData;
     /** 取单例 */
-    export var $singlon: <T>(clazz: { new (): T, __instance?: T }) => T;
+    export var $singlon: <T>(clazz: { new(): T, __instance?: T }) => T;
     /** 获取 HTML 格式文本 */
     export var $parseHtml: (htmltext: string) => egret.ITextElement[];
     /** 报错列表 */
@@ -16,7 +16,7 @@ namespace game {
 
     /**
      * 全局类
-     * @author wizardc
+     * @author cary
      */
     export namespace Global {
         export function init(stage: egret.Stage): void {

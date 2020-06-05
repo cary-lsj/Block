@@ -1,10 +1,10 @@
 namespace game {
     /**
      * 资源加载管理基类
-     * @author wizardc
+     * @author cary
      */
     export abstract class ResMgrBase<T extends IRes> {
-        protected _resMap: {[url: string]: Recyclable<T>};
+        protected _resMap: { [url: string]: Recyclable<T> };
         protected _checkTime: number = 10000;
 
         public constructor() {

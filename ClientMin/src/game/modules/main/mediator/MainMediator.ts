@@ -33,14 +33,17 @@ namespace game {
             this.model.gamebegin();
             this._view.starnum.text = $userData.portList.starNum;
         }
+
         @InterestNotify(NotifyConst.updateKey)
         public updateKey() {
             // this._view.keynum.text = $userData.portList.keyNum;
         }
+
         @InterestNotify(NotifyConst.updateStar)
         public updateStar() {
             this._view.starnum.text = $userData.portList.starNum;
         }
+
         //修改游戏场景地图数据，并检测是否完成
         @InterestEvent(MainEvent.addMood)
         private addMood(e: egret.Event) {
@@ -55,17 +58,20 @@ namespace game {
 
             }
         }
+
         //初始化木块坐标
         @InterestEvent(MainEvent.initPos)
         private initPos(e: egret.Event) {
             let data = e.data as MapVO;
             data.initPos();
         }
+
         @InterestEvent(MainEvent.removeMood)
         private removeMood(e: egret.Event) {
             let data = e.data as MapVO;
             $userData.gamePortVO.GameMapVO.removeMood(data);
         }
+
         //检测游戏是否完成
         public chechFillMap(): boolean {
             let map = $userData.gamePortVO.GameMapVO.map;
@@ -79,6 +85,7 @@ namespace game {
             }
             return true;
         }
+
         //按下木块
         @InterestEvent(MainEvent.beginMood)
         private beginMood(e: egret.Event) {
@@ -94,6 +101,7 @@ namespace game {
                 return;
             }
         }
+
         //松开木块
         @InterestEvent(MainEvent.endMood)
         private endMood(e: egret.Event) {
@@ -123,6 +131,7 @@ namespace game {
                 return;
             }
         }
+
         //恢复木块层级
         @InterestEvent(MainEvent.rechildindex)
         public rechildindex(e: egret.Event) {
@@ -130,6 +139,7 @@ namespace game {
             this._view.grp_mood.setChildIndex(_mapmood, _mapmood.index);
             _mapmood.index = null;
         }
+
         //将坐标转换成格子
         public getlattice(x: number, y: number): Point {
             let _subx: number = x - this._view.map.x;
@@ -138,6 +148,7 @@ namespace game {
             let result: game.Point = MapUtil.getGrid(point);
             return result;
         }
+
         //将格子转换成全局坐标
         public getOVPixel(col: number, row: number): Point {
             let point = new egret.Point(col, row);
@@ -146,6 +157,7 @@ namespace game {
             result.y += this._view.map.y;
             return result;
         }
+
         //检测是否能放下
         public chechPlace(vo: MapVO): Boolean {
             let map = vo.data;
@@ -167,6 +179,7 @@ namespace game {
             }
             return true;
         }
+
         @InterestEvent(MainEvent.removeKeymood)
         private removeKeymood(): void {
             let numMood: number = this._view.grp_mood.numChildren;
@@ -185,6 +198,7 @@ namespace game {
             this._view.map.removeChildren();
             $facade.addModule(ModuleID.menu);
         }
+
         /** 监听 关闭到Google按钮 */
         @InterestEvent(MainEvent.clickRefresh)
         private clickRefresh(e: egret.Event): void {
@@ -205,6 +219,7 @@ namespace game {
         private showkeymood() {
             let port = $userData.gamePortVO.curPort;
             let mapmoodData = port.moodListVO;
+            LogUtil.useKey(port.id);
             let key: number = 0;   //记录值，点击一次只提示一个
             for (let i = this.useKey; i < mapmoodData.length; i++) {
                 let map_mood: MapMoodItem = this._view.grp_mood.getChildAt(i) as MapMoodItem;

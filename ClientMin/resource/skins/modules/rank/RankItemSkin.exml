@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="gameSkin.RankItemSkin" width="380" height="100" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
-	<e:Image width="359" height="90" x="22" y="6" source="common_json.por_num_bg" scale9Grid="12,14,54,61" anchorOffsetX="0" anchorOffsetY="0"/>
-	<e:Image x="287" anchorOffsetX="0" width="106" anchorOffsetY="0" height="93.01" scaleX="0.6" scaleY="0.6" verticalCenter="0" source="common_json.rankstar"/>
-
-
-	<e:BitmapLabel id="txt_rank" width="66.4" height="50.75" x="56.5"  anchorOffsetX="0" anchorOffsetY="0" textAlign="conter" verticalAlign="middle" verticalCenter="-2.5" font="rank_fnt" text="123"/>
-	
-	<e:BitmapLabel id="txt_starNum" width="112" height="62" x="145.5" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" textAlign="center" verticalAlign="middle" verticalCenter="-3" font="rankStar_fnt" text="123"/>
-
+<e:Skin class="gameSkin.RankItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="480" height="100" source="common_json.por_num_bg" scale9Grid="34,24,9,32"/>
+	<e:Image x="407" source="common_json.rankstar" y="16"/>
+	<e:BitmapLabel id="txt_rank"  textAlign="conter" verticalAlign="middle" font="rank_fnt" text="123" horizontalCenter="-201" y="34"/>
+	<e:BitmapLabel id="txt_starNum" textAlign="center" verticalAlign="middle" font="rankStar_fnt" text="999" horizontalCenter="133.5" y="34"/>
+	<e:Label id="lab_name" text="乱世清晨只为伊大苏" size="20" fontFamily="SimHei" textColor="0x201410" horizontalCenter="5" y="40"/>
+	<e:Image id="img_head" x="72" source="img_head_png" width="78" height="78" y="9"/>
 </e:Skin>

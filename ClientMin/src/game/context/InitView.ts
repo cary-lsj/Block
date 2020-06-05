@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 视图初始化
-     * @author wizardc
+     * @author cary
      */
     export class InitView extends Command {
         public execute(notifyName: string): void {
@@ -9,7 +9,7 @@ namespace game {
 
             let registerMediator = $facade.registerMediator.bind($facade);
 
-            let registerModule = <T extends egret.DisplayObject & IModuleView>(moduleID: ModuleID, viewClass: { new (): T }, mediatorClass: { new (): IMediator<T> }) => {
+            let registerModule = <T extends egret.DisplayObject & IModuleView>(moduleID: ModuleID, viewClass: { new(): T }, mediatorClass: { new(): IMediator<T> }) => {
                 registerMediator(viewClass, mediatorClass);
                 ModuleManager.mapModule(moduleID, viewClass);
             };
@@ -24,11 +24,11 @@ namespace game {
             registerModule(ModuleID.rank, RankDialog, RankMediator);
             registerModule(ModuleID.humor, HumorDialog, HumorMediator);
             registerModule(ModuleID.ad, AdDialog, AdMediator);
-            registerModule(ModuleID.room,RoomFullWindow,RoomMediator);
-            registerModule(ModuleID.pkmain,PKMainFullWindow,PKMainMediator);
-            registerModule(ModuleID.pkwin,PKWinFullWindow,PKWinMediator);
-            registerModule(ModuleID.pklose,PkLoseView,PkLoseMediator);
-            registerModule(ModuleID.shop,ShopView,ShopMediator);
+            registerModule(ModuleID.room, RoomFullWindow, RoomMediator);
+            registerModule(ModuleID.pkmain, PKMainFullWindow, PKMainMediator);
+            registerModule(ModuleID.pkwin, PKWinFullWindow, PKWinMediator);
+            registerModule(ModuleID.pklose, PkLoseView, PkLoseMediator);
+            registerModule(ModuleID.shop, ShopView, ShopMediator);
             registerModule(ModuleID.tool, ToolView, ToolMediator);
             registerModule(ModuleID.login, LoginFullWindow, LoginMediator);
             registerModule(ModuleID.msg, MsgDialog, MsgMediator);

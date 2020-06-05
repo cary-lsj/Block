@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 通过对象池进行缓存的对象类型
-     * @author wizardc
+     * @author cary
      */
     export interface ICacheable {
         /**

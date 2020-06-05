@@ -1,7 +1,7 @@
 ﻿namespace game {
     /**
      * 控制者
-     * @author wizardc
+     * @author cary
      */
     export class Controller {
         private static _instance: Controller;
@@ -10,13 +10,13 @@
             return Controller._instance || (Controller._instance = new Controller());
         }
 
-        private _commandMap: {[k: string]: {new(): ICommand}[]};
+        private _commandMap: { [k: string]: { new(): ICommand }[] };
 
         private constructor() {
             this._commandMap = {};
         }
 
-        public registerCommand(notifyName: string | NotifyConst, commandClass: {new(): ICommand}): void {
+        public registerCommand(notifyName: string | NotifyConst, commandClass: { new(): ICommand }): void {
             let n = String(notifyName);
             if (n && commandClass) {
                 if (!this.hasCommand(n)) {
@@ -46,7 +46,7 @@
                 let list = this._commandMap[n];
                 for (let key in list) {
                     let commandClass = list[key];
-                    if ((<any> commandClass.prototype.constructor).__cacheCommand) {
+                    if ((<any>commandClass.prototype.constructor).__cacheCommand) {
                         let commandInstance = recyclable(commandClass);
                         commandInstance.execute(notifyName, ...args);
                         commandInstance.recycle();

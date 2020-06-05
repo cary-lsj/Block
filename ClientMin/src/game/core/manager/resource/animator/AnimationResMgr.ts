@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 动画资源管理
-     * @author wizardc
+     * @author cary
      */
     export class AnimationResMgr extends ResMgrBase<AnimationRes> {
         private _defaultLiveTime: number = 10000;

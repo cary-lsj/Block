@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 序列帧动画资源
-     * @author wizardc
+     * @author cary
      */
     export class MovieRes extends egret.EventDispatcher implements IRes {
         private _inConfig: boolean;

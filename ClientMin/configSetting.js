@@ -1,22 +1,24 @@
 ﻿
 window.js_gameConfig = {
 	gameVersion: "https://www.cxagile.cn/block1.0",
-	isRelease: false,
+	useCloud: false,
 	serverUrl: "https://www.cxagile.cn:8080",
+	useSKD: true,
+	isLittleGame: false,
 }
 
 window.js_gameVars = {
 	username: "",
 	platform: 0,
 	zoneID: 0,
-	useWss: false,
+	useWss: true,
 	time: 0,
 	sign: "",
 	channel: "web",
 	serverUrl: "",
 	websocketIP: "www.cxagile.cn",
 	httpIP: "www.cxagile.cn",
-	port: 8001,
+	port: 8080,
 }
 
 window.js_userInfo = {

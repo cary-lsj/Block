@@ -80,6 +80,7 @@ namespace game {
 
         private onShareClick() {
             platform.share();
+            LogUtil.shareWin();
         }
 
         /** 播放动画 */

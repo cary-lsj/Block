@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 游戏代理
-     * @author wizardc
+     * @author cary
      */
     export class GameProxy extends ProxyBase {
         public constructor() {

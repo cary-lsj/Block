@@ -1,10 +1,10 @@
 namespace game.Route {
     /**
      * 路由
-     * @author wizardc
+     * @author cary
      */
     /** 登录 */
-    export const loginwx: string = "/loginwx";
+    export const login: string = "/login";
 
     /** 开始游戏 */
     export const palybegin: string = "/palybegin";
@@ -18,6 +18,8 @@ namespace game.Route {
     export const rank: string = "/rank";
     /** 战斗 */
     export const game: string = "/game";
-     /** 商城 */
+    /** 商城 */
     export const buy: string = "/buy";
+    /** 日志 */
+    export const log: string = "/log";
 }

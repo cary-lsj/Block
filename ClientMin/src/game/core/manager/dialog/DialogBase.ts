@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 对话框基类
-     * @author wizardc
+     * @author cary
      */
     export abstract class DialogBase<T extends eui.Component> extends eui.Component implements IDialog {
         public content: eui.Group;

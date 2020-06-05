@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 游戏开始预加载
-     * @author wizardc
+     * @author cary
      */
     export class GamePreloadCommand extends Command implements RES.PromiseTaskReporter {
         @InjectProxy(ProxyID.login)
@@ -14,7 +14,7 @@ namespace game {
 
             this.load().then(() => {
 
-                if (RELEASE) {
+                if (js_gameConfig.useSKD) {
                     this.model.reqLogin();
                 } else {
                     $facade.addModule(ModuleID.login);
@@ -27,7 +27,7 @@ namespace game {
 
         private async load(): Promise<void> {
             try {
-                if (js_gameConfig.isRelease) {
+                if (js_gameConfig.useCloud) {
                     await RES.loadConfig("default.res.json", js_gameConfig.gameVersion + "/resource/");
                 } else {
                     await RES.loadConfig("resource/default.res.json", "resource/");
@@ -43,8 +43,8 @@ namespace game {
                 // this.initPKPort(PKmapinfo);
                 // $stage.removeChild(loadingView);
 
-                // let userInfo = await platform.getUserInfo();
-                // GlobalInfo.initUserinfo(userInfo);
+                let userInfo = await platform.getUserInfo();
+                GlobalInfo.initUserinfo(userInfo);
 
                 let account = await platform.login();
                 GlobalInfo.initAccount(account);
@@ -54,7 +54,7 @@ namespace game {
         }
 
         private initPort(mapinfo: any): void {
-            let portList: PortListVO = $userData.portList = new PortListVO();
+            let portList: PortListVO = $userData.portList;
             portList.portList = [];
             portList.updateList(mapinfo["port"]);
             // portList.updateList(mapinfo["port"]["normal"]);

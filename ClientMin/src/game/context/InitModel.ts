@@ -1,7 +1,7 @@
 ﻿namespace game {
     /**
      * 模型初始化
-     * @author wizardc
+     * @author cary
      */
     export class InitModel extends Command {
         public execute(notifyName: string): void {

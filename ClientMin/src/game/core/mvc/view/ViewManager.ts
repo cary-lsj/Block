@@ -1,7 +1,7 @@
 ﻿namespace game {
     /**
      * 管理程序中使用到的所有中介对象
-     * @author wizardc
+     * @author cary
      */
     export class ViewManager {
         private static _instance: ViewManager;

@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 粒子资源
-     * @author wizardc
+     * @author cary
      */
     export class ParticleRes extends egret.EventDispatcher implements IRes {
         private _inConfig: boolean;

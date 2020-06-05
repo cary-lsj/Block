@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 消息发送对象
-     * @author wizardc
+     * @author cary
      */
     export interface INotifier {
         dispatch(notifyName: string | NotifyConst, ...args): void;
@@ -9,7 +9,7 @@ namespace game {
 
     /**
      * 观察者对象
-     * @author wizardc
+     * @author cary
      */
     export interface IObserver {
         addListener(notifyName: string | NotifyConst, callback: Function, thisObj?: any): void;
@@ -19,7 +19,7 @@ namespace game {
 
     /**
      * 命令对象
-     * @author wizardc
+     * @author cary
      */
     export interface ICommand {
         execute(notifyName: string | NotifyConst, ...args): void;
@@ -27,7 +27,7 @@ namespace game {
 
     /**
      * 代理类
-     * @author wizardc
+     * @author cary
      */
     export interface IProxy {
         name: string | ProxyID;
@@ -39,7 +39,7 @@ namespace game {
 
     /**
      * 中介类
-     * @author wizardc
+     * @author cary
      */
     export interface IMediator<T extends egret.DisplayObject> extends IObserver {
         view: T;

@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 中介基类, 抽一层出来处理非 MVC 功能的逻辑
-     * @author wizardc
+     * @author cary
      */
     export abstract class MediatorBase<T extends egret.DisplayObject> extends AbstractMediator<T> {
         protected _panelState: PanelStateManager;

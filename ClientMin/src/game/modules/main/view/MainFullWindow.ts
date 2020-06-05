@@ -56,10 +56,11 @@ namespace game {
             let i = data.length;
             // 注释不规范代码
             // data.sort((a, b) => { return Math.random() > .5 ? -1 : 1; });
-            while (i) {
-                let j = Math.floor(Math.random() * i--);
-                [data[i], data[j]] = [data[j], data[i]];
-            }
+            // while (i) {
+            //     let j = Math.floor(Math.random() * i--);
+            //     [data[i], data[j]] = [data[j], data[i]];
+            // }
+            data.upset();
 
             this.getGenWidth(data);
             //遍历 保证所有的木块都能被渲染

@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 序列帧画剪辑
-     * @author wizardc
+     * @author cary
      */
     export class EffectClip extends egret.DisplayObjectContainer implements IDispose {
         private _resMgr: MovieResMgr;

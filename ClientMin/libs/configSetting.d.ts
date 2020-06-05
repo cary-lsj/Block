@@ -2,8 +2,14 @@
 declare var js_gameConfig: {
     /** 游戏资源版本号路径 */
     gameVersion: string;
-    /** 是否为正式版 */
-    isRelease: boolean;
+    /** 是否为加载云资源 */
+    useCloud: boolean;
+    /** 服务器地址 */
+    serverUrl: string;
+    /* 是否对接平台 */
+    useSKD: boolean;
+    /** 小游戏 */
+    isLittleGame;
 }
 
 declare var js_gameVars: {

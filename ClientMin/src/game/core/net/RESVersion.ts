@@ -1,6 +1,6 @@
 /**
  * 资源版本控制管理器
- * @author wizardc
+ * @author cary
  */
 namespace game.RESVersion {
     export function init(data: any): void {
@@ -12,7 +12,7 @@ namespace game.RESVersion {
     }
 
     class Impl {
-        private _map: {[url: string]: string};
+        private _map: { [url: string]: string };
 
         public init(data: any): void {
             this._map = data;

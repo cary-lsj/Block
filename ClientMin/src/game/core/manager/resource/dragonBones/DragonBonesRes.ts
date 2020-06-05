@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 龙骨资源
-     * @author wizardc
+     * @author cary
      */
     export class DragonBonesRes extends egret.EventDispatcher implements IRes {
         private _inConfig: boolean;

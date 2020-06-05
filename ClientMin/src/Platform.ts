@@ -12,18 +12,42 @@ declare interface Platform {
 
     share(): void;
 
+    showRank(): void;
+
+    setKVData(data): Promise<any>;
+
 }
 
 class DebugPlatform implements Platform {
     async getUserInfo() {
-        return undefined;
+        return new Promise((resolve, reject) => {
+            var data = {
+                avatarUrl: "",
+                gender: 0,
+                nickName: "测试账号"
+            }
+            resolve(data);
+        })
     }
-    async login() {
 
+    async login() {
+        return new Promise((resolve, reject) => {
+            resolve("testAccount");
+        })
     }
+
     share() {
 
     }
+
+    showRank() {
+
+    }
+
+    async setKVData(data) {
+
+    }
+
 }
 
 

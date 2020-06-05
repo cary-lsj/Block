@@ -1,15 +1,17 @@
 
 window.js_gameConfig = {
 	gameVersion: "https://www.cxagile.cn/block1.0",
-	isRelease: false,
-	serverUrl: "https://www.cxagile.cn:8080",
+	useCloud: false,
+	serverUrl: "https://www.cxagile.cn:8080/loginwx",
+	useSKD: true,
+	isLittleGame: true,
 }
 
 window.js_gameVars = {
 	username: "",
 	platform: 0,
 	zoneID: 0,
-	useWss: false,
+	useWss: true,
 	time: 0,
 	sign: "",
 	channel: "web",

@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 一个简单的观察者
-     * @author wizardc
+     * @author cary
      */
     export abstract class Observer extends Notifier implements IObserver {
         public constructor() {

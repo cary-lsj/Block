@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 入口类
-     * @author wizardc
+     * @author cary
      */
     export class GameApp extends egret.DisplayObjectContainer {
         public constructor() {

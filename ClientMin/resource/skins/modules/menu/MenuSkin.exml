@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="gameSkin.MenuSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:game="game.*"
         xmlns:w="http://ns.egret.com/wing">
-	<game:ScaleButton id="btn_rank" label="" x="495" y="980" width="86" height="89" bottom="77"  visible="false">
+	<game:ScaleButton id="btn_rank" label="" width="86" height="89"  x="277" bottom="77" visible="false">
 		<game:skinName>
 			<e:Skin states="up,down,disabled">
 			<e:Image width="100%" height="100%" source="common_json.button-bg" x="0" y="0" visible="true"/>

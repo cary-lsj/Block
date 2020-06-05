@@ -1,6 +1,6 @@
 /**
  * 粒子管理器
- * @author wizardc
+ * @author cary
  */
 namespace game.ParticleManager {
     /**

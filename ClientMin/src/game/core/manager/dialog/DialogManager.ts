@@ -1,6 +1,6 @@
 /**
  * 对话窗口管理器
- * @author wizardc
+ * @author cary
  */
 namespace game.DialogManager {
     const useTween: boolean = false;
@@ -15,7 +15,7 @@ namespace game.DialogManager {
 
     export function hasMask(): boolean {
         return impl.hasMask();
-    }   
+    }
 
     /**
      * @ignore
@@ -49,8 +49,8 @@ namespace game.DialogManager {
         private _container: eui.Group;
         private _mask: eui.Rect;
         private _dialogList: DialogBase<eui.Component>[];
-        private _dialogMap: {[id: number]: DialogBase<eui.Component>};
-        private _moduleIDMap: {[k: number]: ModuleID};
+        private _dialogMap: { [id: number]: DialogBase<eui.Component> };
+        private _moduleIDMap: { [k: number]: ModuleID };
 
         public constructor() {
             this._dialogList = [];
@@ -127,7 +127,7 @@ namespace game.DialogManager {
             this.checkMask();
             if (useTween) {
                 dialog.alpha = 0;
-                egret.Tween.get(dialog).to({alpha: 1}, 200);
+                egret.Tween.get(dialog).to({ alpha: 1 }, 200);
             }
         }
 
@@ -155,7 +155,7 @@ namespace game.DialogManager {
             delete this._moduleIDMap[dialog.hashCode];
             if (useTween) {
                 dialog.hiding = true;
-                egret.Tween.get(dialog).to({alpha: 0}, 100).call(this.closeDialog, this, [dialog, moduleID]);
+                egret.Tween.get(dialog).to({ alpha: 0 }, 100).call(this.closeDialog, this, [dialog, moduleID]);
             } else {
                 this.closeDialog(dialog, moduleID);
             }

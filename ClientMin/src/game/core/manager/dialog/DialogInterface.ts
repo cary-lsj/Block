@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 对话框接口
-     * @author wizardc
+     * @author cary
      */
     export interface IDialog extends egret.DisplayObject, IModuleView {
         readonly modal: boolean;

@@ -1,7 +1,7 @@
 ﻿namespace game {
     /**
      * 命令初始化
-     * @author wizardc
+     * @author cary
      */
     export class InitCommand extends Command {
         public execute(notifyName: string): void {

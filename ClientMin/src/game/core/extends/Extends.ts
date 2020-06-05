@@ -1,6 +1,6 @@
 //
 // 功能扩展
-// @author wizardc
+// @author cary
 //
 
 interface Object {

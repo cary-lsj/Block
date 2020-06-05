@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 游戏时间, 毫秒
-     * @author wizardc
+     * @author cary
      */
     export class GameTime {
         private static _lastTime: number = 0;

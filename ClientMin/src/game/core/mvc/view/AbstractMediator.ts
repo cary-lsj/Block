@@ -1,11 +1,11 @@
 ﻿namespace game {
     /**
      * 中介基类
-     * @author wizardc
+     * @author cary
      */
     export abstract class AbstractMediator<T extends egret.DisplayObject> extends Observer implements IMediator<T> {
-        protected __interestNotifyList: {[key: string]: Function[]};
-        protected __interestEventList: {[key: string]: Function[]};
+        protected __interestNotifyList: { [key: string]: Function[] };
+        protected __interestEventList: { [key: string]: Function[] };
         protected _facade: Facade = Facade.instance;
         protected _view: T;
 
@@ -71,7 +71,7 @@
             if (!target.__interestNotifyList) {
                 target.__interestNotifyList = {};
             }
-            let map: {[key: string]: Function[]} = target.__interestNotifyList;
+            let map: { [key: string]: Function[] } = target.__interestNotifyList;
             if (!map[n]) {
                 map[n] = [];
             }
@@ -88,7 +88,7 @@
             if (!target.__interestEventList) {
                 target.__interestEventList = {};
             }
-            let map: {[key: string]: Function[]} = target.__interestEventList;
+            let map: { [key: string]: Function[] } = target.__interestEventList;
             if (!map[type]) {
                 map[type] = [];
             }

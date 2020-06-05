@@ -1,7 +1,7 @@
 ﻿namespace game {
     /**
      * 时钟管理器
-     * @author wizardc
+     * @author cary
      */
     export class ClockManagerImpl implements IClockManager {
         private _initialized: boolean = false;

@@ -18,7 +18,8 @@ namespace game {
                 $facade.addModule(ModuleID.msg, undefined, '请输入登录信息');
                 return;
             }
-            $userData.account.userid = id;
+            // $userData.account.userid = id;
+            GlobalInfo.initAccount(id);
             this.model.reqLogin();
         }
 

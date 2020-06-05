@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 可缩放按钮
-     * @author wizardc
+     * @author cary
      */
     export class ScaleButton extends eui.Button {
         public group: eui.Group;

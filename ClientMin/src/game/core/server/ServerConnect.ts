@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 服务器连接
-     * @author wizardc
+     * @author cary
      */
     export class ServerConnect extends egret.EventDispatcher {
         /** 连接失败时最多的重连次数 */

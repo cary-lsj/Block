@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 账号数据
-     * @author wizardc
+     * @author cary
      */
     export class AccountVO {
         /** 玩家用户名 */

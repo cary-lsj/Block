@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 动画资源
-     * @author wizardc
+     * @author cary
      */
     @DeployPool(500)
     export class AnimationRes extends egret.EventDispatcher implements IRes, IDispose, ICacheable {

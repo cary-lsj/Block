@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 代理类 ID
-     * @author wizardc
+     * @author cary
      */
     export const enum ProxyID {
         /** 测试 */

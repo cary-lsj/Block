@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 关卡数据
-     * @author wizardc
+     * @author cary
      */
     export class PortVO {
         /** 关卡ID */

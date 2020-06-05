@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 面板状态管理器
-     * @author wizardc
+     * @author cary
      */
     export class PanelStateManager {
         private static _instance: PanelStateManager;

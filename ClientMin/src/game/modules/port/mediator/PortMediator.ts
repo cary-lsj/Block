@@ -11,12 +11,14 @@ namespace game {
             this._view.update($userData.portList.portList);
             this._view.bml_starNum.text = $userData.portList.starNum;
         }
+
         @InterestEvent(PortEvent.clickBack)
         private clickSet(e: egret.Event): void {
             SoundManager.getInstance().PlaySound(SoundManager.mClickAudioUrl);
             // SoundManager.getInstance().playClick();
             $facade.addModule(ModuleID.menu);
         }
+
         @InterestEvent(PortEvent.clickStart)
         private clickStart(e: egret.Event): void {
             SoundManager.getInstance().PlaySound(SoundManager.mClickAudioUrl);

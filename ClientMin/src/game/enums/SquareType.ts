@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 地图中方块的类型
-     * @author wizardc
+     * @author cary
      */
     export const enum SquareType {
         /** 超出 */

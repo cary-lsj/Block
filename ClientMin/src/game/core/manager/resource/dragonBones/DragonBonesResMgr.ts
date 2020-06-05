@@ -1,10 +1,10 @@
 namespace game {
     /**
      * 龙骨资源管理
-     * @author wizardc
+     * @author cary
      */
     export class DragonBonesResMgr {
-        private _resMap: {[url: string]: DragonBonesRes};
+        private _resMap: { [url: string]: DragonBonesRes };
         private _checkTime: number = 10000;
         private _defaultLiveTime: number = 10000;
 

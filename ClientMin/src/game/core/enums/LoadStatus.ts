@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 加载状态
-     * @author wizardc
+     * @author cary
      */
     export const enum LoadStatus {
         /** 尚未加载 */

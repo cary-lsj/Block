@@ -10,19 +10,23 @@ namespace game {
         }
 
         public gamebegin() {
-            // this._senderHttp.send_Play_Begin($userData.gamePortVO.playProId);
+            LogUtil.startGame($userData.gamePortVO.playProId);
+            this._senderHttp.send_Play_Begin($userData.gamePortVO.playProId);
         }
-        @InterestMessage(gameMsg.EnumMsg.playbeginresponse)
+
+        // @InterestMessage(gameMsg.EnumMsg.playbeginresponse)
         private playbeginresponse(e?: egret.Event) {
             let data = e.data;
             $userData.portList.updateKeyNum(data.response.nPrompt);
         }
 
         public gameend(): void {
-            // this._senderHttp.send_Play_End($userData.gamePortVO.playProId);
+            LogUtil.endGame($userData.gamePortVO.playProId);
+            this._senderHttp.send_Play_End($userData.gamePortVO.playProId);
             this.playendresponse();
         }
-        @InterestMessage(gameMsg.EnumMsg.playendresponse)
+
+        // @InterestMessage(gameMsg.EnumMsg.playendresponse)
         private playendresponse(e?: egret.Event) {
             // let data = e.data;
             let data = {
@@ -41,9 +45,11 @@ namespace game {
             $userData.portList.setPort(id);
 
         }
+
         public userprompt() {
             // this._senderHttp.send_Use_Prompt();
         }
+
         @InterestMessage(gameMsg.EnumMsg.usepromptresponse)
         private usepromptresponse(e?: egret.Event) {
             let data = e.data;

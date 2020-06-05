@@ -1,6 +1,6 @@
 /**
  * 地图工具类
- * @author wizardc
+ * @author cary
  */
 namespace game.MapUtil {
     export const mapTileWidth: number = 50;

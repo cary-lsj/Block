@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 全局配置
-     * @author wizardc
+     * @author cary
      */
     export class GlobalConfig {
         private static _useFilter: boolean = true;

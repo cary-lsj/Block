@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 屏幕旋转管理器
-     * @author wizardc
+     * @author cary
      */
     export class OrientationManager {
         private static _orientation: string = egret.OrientationMode.PORTRAIT;

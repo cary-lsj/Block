@@ -1,7 +1,7 @@
 ﻿namespace game {
     /**
      * 代理 MVC 中所有处理方法
-     * @author wizardc
+     * @author cary
      */
     export class Facade {
         private static _instance: Facade;
@@ -27,7 +27,7 @@
             this._provider.dispatch(notifyName, ...args);
         }
 
-        public registerCommand(notifyName: string | NotifyConst, commandClass: {new(): ICommand}): void {
+        public registerCommand(notifyName: string | NotifyConst, commandClass: { new(): ICommand }): void {
             this._controller.registerCommand(notifyName, commandClass);
         }
 
@@ -70,11 +70,11 @@
             return this._viewManager.contextView;
         }
 
-        public registerMediator<T extends egret.DisplayObject>(viewClass: {new(): T}, mediatorClass: {new(): IMediator<T>}): void {
+        public registerMediator<T extends egret.DisplayObject>(viewClass: { new(): T }, mediatorClass: { new(): IMediator<T> }): void {
             this._viewManager.registerMediator(viewClass, mediatorClass);
         }
 
-        public hasMediator<T extends egret.DisplayObject>(viewClass: {new(): T}): boolean {
+        public hasMediator<T extends egret.DisplayObject>(viewClass: { new(): T }): boolean {
             return this._viewManager.hasMediator(viewClass);
         }
 
@@ -82,7 +82,7 @@
             return this._viewManager.getMediator(viewObject);
         }
 
-        public removeMediator<T extends egret.DisplayObject>(viewClass: {new(): T}, mediatorClass: {new(): IMediator<T>}): void {
+        public removeMediator<T extends egret.DisplayObject>(viewClass: { new(): T }, mediatorClass: { new(): IMediator<T> }): void {
             this._viewManager.removeMediator(viewClass, mediatorClass);
         }
     }

@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 当前游戏 关卡数据
-     * @author wizardc
+     * @author cary
      */
     export class GamePortVO {
         /** 地图数据 */

@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 模块层
-     * @author wizardc
+     * @author cary
      */
     export const enum ModuleLayer {
         /** 场景层 */

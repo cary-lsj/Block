@@ -4,7 +4,7 @@ import Facade = game.Facade;
 
 //
 // 模块扩展
-// @author wizardc
+// @author cary
 //
 
 declare module game {
@@ -21,7 +21,7 @@ declare module game {
     }
 }
 
-(function() {
+(function () {
     let p;
 
     p = Facade.prototype;

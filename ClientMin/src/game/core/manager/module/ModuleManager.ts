@@ -1,13 +1,13 @@
 /**
  * 模块管理器
- * @author wizardc
+ * @author cary
  */
 namespace game.ModuleManager {
     export function init(container: IModuleContainer): void {
         impl.init(container);
     }
 
-    export function mapModule<T extends egret.DisplayObject & IModuleView>(moduleID: ModuleID, viewClass: {new(): T}): void {
+    export function mapModule<T extends egret.DisplayObject & IModuleView>(moduleID: ModuleID, viewClass: { new(): T }): void {
         impl.mapModule(moduleID, viewClass);
     }
 
@@ -25,10 +25,10 @@ namespace game.ModuleManager {
 
     class Impl<T extends egret.DisplayObject & IModuleView> {
         private _container: IModuleContainer;
-        private _viewClassMap: {[k: number]: {new(): T}};
+        private _viewClassMap: { [k: number]: { new(): T } };
         private _viewResMgr: ModuleResMgr;
-        private _viewMap: {[k: number]: T};
-        private _showViewMap: {[k: number]: boolean};
+        private _viewMap: { [k: number]: T };
+        private _showViewMap: { [k: number]: boolean };
 
         public constructor() {
             this._viewClassMap = {};
@@ -41,7 +41,7 @@ namespace game.ModuleManager {
             this._viewResMgr = $singlon(ModuleResMgr);
         }
 
-        public mapModule(moduleID: ModuleID, viewClass: {new(): T}): void {
+        public mapModule(moduleID: ModuleID, viewClass: { new(): T }): void {
             this._viewClassMap[moduleID] = viewClass;
         }
 
@@ -49,11 +49,11 @@ namespace game.ModuleManager {
             if (this._showViewMap[moduleID]) {
                 let view = this._viewMap[moduleID];
                 let mediator = $facade.getMediator(view);
-                if (moduleVO && moduleVO.tabData && moduleVO.tabData.length && typeof (<any> mediator).setTabData === "function") {
-                    (<any> mediator).setTabData(...moduleVO.tabData);
+                if (moduleVO && moduleVO.tabData && moduleVO.tabData.length && typeof (<any>mediator).setTabData === "function") {
+                    (<any>mediator).setTabData(...moduleVO.tabData);
                 }
-                if (typeof (<any> mediator).setModuleData === "function") {
-                    (<any> mediator).setModuleData(...moduleData);
+                if (typeof (<any>mediator).setModuleData === "function") {
+                    (<any>mediator).setModuleData(...moduleData);
                 }
                 return;
             }
@@ -68,11 +68,11 @@ namespace game.ModuleManager {
             let layer = this.getModuleLayer(view.layer);
             layer.addChild(view);
             let mediator = $facade.getMediator(view);
-            if (moduleVO && moduleVO.tabData && moduleVO.tabData.length && typeof (<any> mediator).setTabData === "function") {
-                (<any> mediator).setTabData(...moduleVO.tabData);
+            if (moduleVO && moduleVO.tabData && moduleVO.tabData.length && typeof (<any>mediator).setTabData === "function") {
+                (<any>mediator).setTabData(...moduleVO.tabData);
             }
-            if (typeof (<any> mediator).setModuleData === "function") {
-                (<any> mediator).setModuleData(...moduleData);
+            if (typeof (<any>mediator).setModuleData === "function") {
+                (<any>mediator).setModuleData(...moduleData);
             }
             this._showViewMap[moduleID] = true;
             // 特殊窗口
@@ -81,7 +81,7 @@ namespace game.ModuleManager {
                     FullWindowManager.addFullWindow(moduleID, view);
                     break;
                 case ModuleLayer.dialogLayer:
-                    DialogManager.addDialog(moduleID, <any> view);
+                    DialogManager.addDialog(moduleID, <any>view);
                     break;
             }
             // 返回

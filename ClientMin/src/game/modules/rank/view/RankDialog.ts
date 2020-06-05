@@ -23,7 +23,6 @@ namespace game {
 
         protected childrenCreated(): void {
             super.childrenCreated();
-            // this.visible = false;
             this.btn_close.on(egret.TouchEvent.TOUCH_TAP, this.onCloseClick, this);
             this.list_rank.dataProvider = this._listData;
             this.list_rank.itemRenderer = RankItem;

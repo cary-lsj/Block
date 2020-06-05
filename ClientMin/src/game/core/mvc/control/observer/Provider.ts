@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 观察者模式的实现
-     * @author wizardc
+     * @author cary
      */
     export class Provider {
         private static _instance: Provider;
@@ -10,7 +10,7 @@ namespace game {
             return Provider._instance || (Provider._instance = new Provider());
         }
 
-        private _callbackMap: {[k: string]: CallbackInfo[]};
+        private _callbackMap: { [k: string]: CallbackInfo[] };
 
         private constructor() {
             this._callbackMap = {};
@@ -41,7 +41,7 @@ namespace game {
                 for (let i = 0, len = list.length; i < len; i++) {
                     let info = list[i];
                     if (info && info.callback == callback && info.thisObj == thisObj) {
-                        (<Recyclable<CallbackInfo>> info).recycle();
+                        (<Recyclable<CallbackInfo>>info).recycle();
                         list[i] = undefined;
                         break;
                     }

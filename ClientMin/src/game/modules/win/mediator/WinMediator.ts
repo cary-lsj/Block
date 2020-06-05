@@ -29,9 +29,9 @@ namespace game {
         private clickNext(e: egret.Event): void {
             $facade.removeModule(ModuleID.win);
             let portId = $userData.gamePortVO.playProId;
-            if(portId < $userData.portList.portList.length){
+            if (portId < $userData.portList.portList.length) {
                 $facade.dispatch(NotifyConst.gameNext);
-            }     
+            }
         }
         /** 监听 再来一次按钮 */
         @InterestEvent(WinEvent.clickAgain)
@@ -44,27 +44,29 @@ namespace game {
         @InterestEvent(WinEvent.clickRank)
         private clickRank(e: egret.Event): void {
             // console.log('clickRank');
-            $facade.addModule(ModuleID.rank);
+            // $facade.addModule(ModuleID.rank);
+            platform.showRank();
+            LogUtil.rankWin($userData.gamePortVO.playProId);
         }
 
         /** 监听 看广告按钮 */
         @InterestEvent(WinEvent.clickAd)
         private clickAd(e: egret.Event): void {
             // console.log('clickAd');
-            if(!this.seeAdFlage){
+            if (!this.seeAdFlage) {
                 this.model.senSeeAd()
                 this.seeAdFlage = true
-            }else{
+            } else {
                 console.log('请进行下一关')
             }
-            
+
             // this._view.seeAd.play(0);
         }
 
-        private resetStar(): void{
-            this._view.image0.alpha = this._view.image1.alpha =this._view.image2.alpha = 0;
-            this._view.image0.x = this._view.image1.x =this._view.image2.x = 246;
-            this._view.image0.y = this._view.image1.y =this._view.image2.y = 211;
+        private resetStar(): void {
+            this._view.image0.alpha = this._view.image1.alpha = this._view.image2.alpha = 0;
+            this._view.image0.x = this._view.image1.x = this._view.image2.x = 246;
+            this._view.image0.y = this._view.image1.y = this._view.image2.y = 211;
         }
 
 

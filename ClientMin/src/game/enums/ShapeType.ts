@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 方块形状
-     * @author wizardc
+     * @author cary
      */
     export const enum ShapeType {
         shape,

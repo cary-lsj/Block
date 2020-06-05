@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 关卡列表数据
-     * @author wizardc
+     * @author cary
      */
     export class RankListVo {
         public rankList: RankVO[];
@@ -15,6 +15,6 @@ namespace game {
                 this.rankList.push(vo);
             }
         }
-        
+
     }
 }

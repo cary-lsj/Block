@@ -1,7 +1,7 @@
 ﻿namespace game {
     /**
      * 上下文初始化
-     * @author wizardc
+     * @author cary
      */
     export class ContextInitCommand extends CommandQueue {
         protected initializeCommands(): void {

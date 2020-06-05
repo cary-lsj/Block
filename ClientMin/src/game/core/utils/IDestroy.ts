@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 资源销毁接口
-     * @author wizardc
+     * @author cary
      */
     export interface IDestroy {
         destroy(): boolean;

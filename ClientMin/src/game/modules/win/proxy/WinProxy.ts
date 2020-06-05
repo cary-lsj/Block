@@ -4,14 +4,14 @@ namespace game {
      */
     export class WinProxy extends ProxyBase {
 
-        public keyNum:string
+        public keyNum: string
 
         public constructor() {
             super(ProxyID.win);
         }
 
-        public senSeeAd(){
-            this._senderHttp.send_See_Ad(1)
+        public senSeeAd() {
+            // this._senderHttp.send_See_Ad(1)
         }
 
         @InterestMessage(gameMsg.EnumMsg.seeadresponse)

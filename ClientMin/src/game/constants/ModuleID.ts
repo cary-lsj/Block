@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 模块 ID
-     * @author wizardc
+     * @author cary
      */
     export enum ModuleID {
         /** 测试 */
@@ -37,6 +37,6 @@ namespace game {
         /** 工具 */
         tool,
         /**消息提示弹窗*/
-         msg,
+        msg,
     }
 }

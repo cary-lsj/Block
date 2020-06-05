@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 粒子动画剪辑
-     * @author wizardc
+     * @author cary
      */
     export class ParticleClip extends egret.DisplayObjectContainer implements IDispose {
         private _resMgr: ParticleResMgr;

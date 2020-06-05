@@ -5,7 +5,7 @@ namespace game {
     /**
      * 模块中介类接口
      * 执行顺序: onRegister -> setTabData -> setModuleData
-     * @author wizardc
+     * @author cary
      */
     export interface IModuleMediator {
         /**
@@ -21,7 +21,7 @@ namespace game {
 
     /**
      * 模块容器接口
-     * @author wizardc
+     * @author cary
      */
     export interface IModuleContainer {
         /** 场景层 */
@@ -83,11 +83,11 @@ namespace game {
      */
     export function ReleaseRes(policy: ModuleResPolicy, ...resNames: string[]) {
         return function (constructor: Function) {
-            (<any> constructor).__resPolicy = policy;
+            (<any>constructor).__resPolicy = policy;
             if (resNames && resNames.length > 0) {
-                let list = (<any> constructor).__releaseResList;
+                let list = (<any>constructor).__releaseResList;
                 if (!list) {
-                    (<any> constructor).__releaseResList = list = [];
+                    (<any>constructor).__releaseResList = list = [];
                 }
                 for (let resName of resNames) {
                     if (list.indexOf(resName) == -1) {

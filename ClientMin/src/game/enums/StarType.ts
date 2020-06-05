@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 星星的类型的类型
-     * @author wizardc
+     * @author cary
      */
     export const enum StarType {
         /** 已拥有 */

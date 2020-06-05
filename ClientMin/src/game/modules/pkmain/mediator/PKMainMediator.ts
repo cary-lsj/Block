@@ -172,7 +172,7 @@ namespace game {
 
             let playPortId = this._GamerInfo.RandomNumBoth(0, 50);
             let port = $userData.portPKList.getPort(playPortId);
-            let gamePortVO = $userData.gamePortVO = new GamePortVO();
+            let gamePortVO = $userData.gamePortVO;
             gamePortVO.update(port);
             let mapData = $userData.gamePortVO;
             // this._view.updateData(mapData);

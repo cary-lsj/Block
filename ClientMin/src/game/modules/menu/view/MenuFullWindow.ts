@@ -61,6 +61,7 @@ namespace game {
 
         private onShareClick() {
             platform.share();
+            LogUtil.shareMain();
         }
 
         public updateAssets() {

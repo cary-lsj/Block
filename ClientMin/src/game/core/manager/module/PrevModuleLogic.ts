@@ -1,10 +1,10 @@
 namespace game {
     /**
      * 模块返回逻辑
-     * @author wizardc
+     * @author cary
      */
     export class PrevModuleLogic {
-        private static _prevMap: {[moduleID: number]: ModuleVO} = {};
+        private static _prevMap: { [moduleID: number]: ModuleVO } = {};
 
         /**
          * 记录要返回的上一个模块

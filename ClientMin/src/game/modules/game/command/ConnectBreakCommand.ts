@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 游戏断线
-     * @author wizardc
+     * @author cary
      */
     export class ConnectBreakCommand extends Command {
         @InjectProxy(ProxyID.login)

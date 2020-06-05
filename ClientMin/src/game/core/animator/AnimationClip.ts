@@ -4,7 +4,7 @@ namespace game {
      * 注意: scaleX 和 scaleY 属性内部特殊处理过, 仅提供 scale 属性控制整体缩放效果, 外部使用 Tween 时,
      * 只能用 scale 属性，否则在发布版中会出现抖动的 bug, 如果 x y 之间的缩放系数不同, 可以将特效嵌套到一
      * 个容器中在控制该容器
-     * @author wizardc
+     * @author cary
      */
     export class AnimationClip extends egret.Bitmap implements IClockClient, IDispose {
         private _resMgr: AnimationResMgr;

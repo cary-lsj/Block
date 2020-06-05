@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 性别
-     * @author wizardc
+     * @author cary
      */
     export const enum GenderType {
         /** 男性 */

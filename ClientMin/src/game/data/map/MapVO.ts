@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 地图数据
-     * @author wizardc
+     * @author cary
      */
     export class MapVO {
         public data: number[][];

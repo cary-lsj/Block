@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 登录时需要请求的方法
-     * @author wizardc
+     * @author cary
      */
     export class LoginRequests extends Notifier {
 

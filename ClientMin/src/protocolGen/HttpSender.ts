@@ -3,15 +3,18 @@ namespace game {
 		private _send: (netVO: any, route: string) => void;
 
 		public constructor(connect: HttpRequest) {
-			this._send = connect.send.bind(connect);
+			this._send = connect.sendMsg.bind(connect);
 		}
 		public send_CLogin_Login(): void {
-			let req = { sID: "", sHeadimg: "", sNick: "" };
+			let req = new gameMsg.LoginRequest();
+			// let req = { sID: "", sHeadimg: "", sNick: "" };
 			req.sID = GlobalInfo.account;
 			req.sHeadimg = js_userInfo.avatarUrl;
 			req.sNick = js_userInfo.nickName;
 
-			this.send_Msg(gameMsg.EnumMsg.loginrequest, req, Route.loginwx);
+			let data = new gameMsg.Request();
+			data.loginRequest = req;
+			this.send_Msg(gameMsg.EnumMsg.loginrequest, data, Route.login);
 		}
 
 		public send_Play_Begin(id: number): void {
@@ -44,17 +47,22 @@ namespace game {
 			this.send_Msg(gameMsg.EnumMsg.rankrequest, req, Route.rank);
 		}
 		//购买道具
-		public send_BuyTool(goods):void{
-			let req = { goods:[], nUserID:""};
+		public send_BuyTool(goods): void {
+			let req = { goods: [], nUserID: "" };
 			req.goods = goods;
 			req.nUserID = $userData.account.userid;
-			this.send_Msg(gameMsg.EnumMsg.buyrequest,req,Route.buy);
+			this.send_Msg(gameMsg.EnumMsg.buyrequest, req, Route.buy);
 		}
 
-		private send_Msg(id: gameMsg.EnumMsg, req: {}, route: string) {
-			let msg = { type: id, request: {} };
-			msg["request"] = req;
+		private send_Msg(id: gameMsg.EnumMsg, req, route: string) {
+			let msg = new gameMsg.Msg();
+			msg.type = id;
+			msg.request = req;
 			this._send(msg, route);
+
+			// let msg = { type: id, request: {} };
+			// msg["request"] = req;
+			// this._send(msg, route);
 		}
 	}
 }

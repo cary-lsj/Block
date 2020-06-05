@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 动画数据
-     * @author wizardc
+     * @author cary
      */
     export class AnimationData {
         public data: IAnimationInfo;
@@ -48,7 +48,7 @@ namespace game {
 
     /**
      * 动画帧数据
-     * @author wizardc
+     * @author cary
      */
     @DeployPool(1000)
     export class FrameData implements ICacheable {

@@ -31,7 +31,8 @@
 		</tween:TweenGroup>
 	</w:Declarations>
 	<e:Group id="group" width="639" height="1136" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0">
-		<e:Image anchorOffsetY="0" height="552" anchorOffsetX="0" width="520" verticalCenter="-13" y="89" scaleX="1" scaleY="1" horizontalCenter="4.5" source="bg_frame_png"/>
+		<e:Image y="281" source="bg_frame_png" x="64"/>
+		<e:Image width="166" height="61" y="286" source="common_json.rank_word" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="3" x="172" scaleX="0.8" scaleY="0.8"/>
 		<game:ScaleButton id="btn_close" label="" x="536" y="315" width="58" height="59">
 			<game:skinName>
 				<e:Skin states="up,down,disabled">
@@ -39,10 +40,21 @@
 				</e:Skin>
 			</game:skinName>
 		</game:ScaleButton>
-		<e:Scroller id="sc_rank" width="411" height="419" y="384.17" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" horizontalCenter="5" x="73" scaleX="1" scaleY="1">
-			<e:List id="list_rank" itemRendererSkinName="gameSkin.RankItemSkin" anchorOffsetY="0" height="417" x="18" y="0" anchorOffsetX="0" width="411"/>
+		<e:Scroller id="sc_rank" y="400" scrollPolicyH="off" scrollPolicyV="on" horizontalCenter="5" width="480" height="370">
+			<e:List id="list_rank" itemRendererSkinName="gameSkin.RankItemSkin" x="18" y="0">
+				<e:ArrayCollection>
+					<e:Array>
+						<e:Object/>
+						<e:Object/>
+						<e:Object/>
+						<e:Object/>
+						<e:Object/>
+						<e:Object/>
+						<e:Object/>
+					</e:Array>
+				</e:ArrayCollection>
+			</e:List>
+			<e:Skin />
 		</e:Scroller>
-		<e:Image width="166" height="61" y="283" source="common_json.rank_word" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="3" x="172" scaleX="0.8" scaleY="0.8"/>
 	</e:Group>
-
 </e:Skin>

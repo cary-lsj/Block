@@ -1,7 +1,7 @@
 ﻿namespace game {
     /**
      * 代理基类
-     * @author wizardc
+     * @author cary
      */
     export abstract class AbstractProxy extends Notifier implements IProxy {
         protected _facade: Facade = Facade.instance;
@@ -29,7 +29,7 @@
             if (!target.__injectProxyMap) {
                 target.__injectProxyMap = {};
             }
-            let map: {[key: string]: string[]} = target.__injectProxyMap;
+            let map: { [key: string]: string[] } = target.__injectProxyMap;
             if (!map[p]) {
                 map[p] = [];
             }

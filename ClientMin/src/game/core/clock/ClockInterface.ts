@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 时钟管理器接口
-     * @author wizardc
+     * @author cary
      */
     export interface IClockManager {
         paused: boolean;
@@ -16,7 +16,7 @@ namespace game {
 
     /**
      * 时钟对象接口
-     * @author wizardc
+     * @author cary
      */
     export interface IClockClient {
         /**

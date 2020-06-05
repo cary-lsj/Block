@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 关卡状态
-     * @author wizardc
+     * @author cary
      */
     export const enum PortType {
         /** 未解锁 */

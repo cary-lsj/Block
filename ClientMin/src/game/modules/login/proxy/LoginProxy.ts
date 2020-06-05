@@ -1,7 +1,7 @@
 namespace game {
     /**
      * 登录代理
-     * @author wizardc
+     * @author cary
      */
     export class LoginProxy extends ProxyBase {
         public constructor() {
@@ -9,13 +9,12 @@ namespace game {
         }
 
         public reqLogin(): void {
-            // this._senderHttp.send_CLogin_Login();
-            this.loginresponse();
-        }
+            LogUtil.enterGame();
+            this._senderHttp.send_CLogin_Login();
+            // this.loginresponse();
 
-        @InterestMessage(gameMsg.EnumMsg.loginresponse)
-        private loginresponse(e?: egret.Event) {
-
+            let port = getItem("port");
+            $userData.portList.setPort(port);
             let data = {
                 gates: [],
                 nTotalGate: 0,
@@ -26,24 +25,29 @@ namespace game {
                 money: 123,
                 sHeadimg: ""
             }
+            this.updatePlayer(data);
+            $facade.addModule(ModuleID.menu);
+        }
+
+        // @InterestMessage(gameMsg.EnumMsg.loginresponse)
+        private loginresponse(e?: egret.Event) {
+            let msg = e.data as gameMsg.Msg;
+            let data = msg.response.loginResponse
             $userData.portList.updatePorts(data.gates, data.nTotalGate);
             $userData.portList.updateStarNum(data.nTotalStar);
-
-            this.updatePlayer(data)
-
+            this.updatePlayer(data);
             $facade.addModule(ModuleID.menu);
-
-            let port = getItem("port");
-            $userData.portList.setPort(port);
         }
-        private updatePlayer(data) {
 
-            let player = $userData.playerVO = new PlayerVO();
-            player.sID = data.nUserID;
-            player.sNick = data.sNick;
-            player.sHeadImg = data.sHeadimg;
-            player.nGold = data.gold;
-            player.nMoney = data.money;
+        private updatePlayer(data: gameMsg.ILoginResponse) {
+
+            let player = $userData.playerVO;
+
+            player.sID = GlobalInfo.account;
+            player.sNick = js_userInfo.nickName;
+            player.sHeadImg = js_userInfo.avatarUrl;
+            player.nGold = 0;
+            player.nMoney = 0;
             player.nTotalGate = data.nTotalGate;
             player.nTotalStar = data.nTotalStar;
             let tools = player.toolList = []
@@ -56,7 +60,7 @@ namespace game {
                 tools.push(vo);
                 toolMap[vo.id] = vo;
             }
-            player.updateTool(data.goods);
+            // player.updateTool(data.goods);
         }
     }
 }
