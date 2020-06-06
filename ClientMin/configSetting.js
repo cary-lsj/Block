@@ -2,7 +2,7 @@
 window.js_gameConfig = {
 	gameVersion: "https://www.cxagile.cn/block1.0",
 	useCloud: false,
-	serverUrl: "https://www.cxagile.cn:8080",
+	serverUrl: "https://www.cxagile.cn:8090",
 	useSKD: true,
 	isLittleGame: false,
 }
@@ -18,7 +18,7 @@ window.js_gameVars = {
 	serverUrl: "",
 	websocketIP: "www.cxagile.cn",
 	httpIP: "www.cxagile.cn",
-	port: 8080,
+	port: 8090,
 }
 
 window.js_userInfo = {

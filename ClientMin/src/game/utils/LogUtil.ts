@@ -3,7 +3,7 @@
  * @author cary
  */
 namespace game.LogUtil {
-    export function log(data: string) {
+    export function debuglog(data: string) {
         let http = HttpRequest.instance;
         http.send(data, Route.log);
     }
@@ -11,7 +11,7 @@ namespace game.LogUtil {
     export function logUser(data: string) {
         let name = js_userInfo.nickName;
         let openId = GlobalInfo.account;
-        LogUtil.log(`${name}，玩家：${data};openId：${openId}`);
+        LogUtil.debuglog(`${name}，玩家：${data};openId：${openId}`);
     }
 
     export function enterGame() {
